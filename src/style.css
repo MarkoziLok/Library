@@ -22,36 +22,11 @@ a {
   text-decoration: none;
 }
 
-/* header {
-  background-color: rgb(12, 12, 14);
+@font-face {
+  font-family: "Forum";
+  src: url(./fonts/forum/Forum-Regular.ttf);
 }
-
-.header-wrapper {
-  margin: 0 auto;
-  max-width: 1440px;
-  color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10px;
-}
-.header-wrapper p {
-  font-size: 30px;
-  line-height: 50px;
-  font-weight: lighter;
-}
-.header-wrapper ul {
-  display: flex;
-  align-items: center;
-}
-.header-wrapper ul li {
-  margin: 0px 10px;
-}
-.header-wrapper ul a {
-  font-family: "Inter", sans-serif;
-  font-size: 20px;
-  color: rgb(255, 255, 255);
-}
-.header-wrapper ul a:hover {
-  color: rgb(187, 148, 95);
-}# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/inter/Inter-VariableFont_slnt\,wght.ttf);
+}/*# sourceMappingURL=style.css.map */
