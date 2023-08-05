@@ -2,6 +2,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: "Forum", serif;
+  text-align: left;
 }
 
 html {
@@ -18,4 +20,38 @@ img {
 
 a {
   text-decoration: none;
+}
+
+header {
+  background-color: rgb(12, 12, 14);
+}
+
+.header-wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+.header-wrapper p {
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: lighter;
+}
+.header-wrapper ul {
+  display: flex;
+  align-items: center;
+}
+.header-wrapper ul li {
+  margin: 0px 10px;
+}
+.header-wrapper ul a {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.header-wrapper ul a:hover {
+  color: rgb(187, 148, 95);
 }/*# sourceMappingURL=style.css.map */

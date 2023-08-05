@@ -2,6 +2,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: 'Forum', serif;
+    text-align: left;
   }
   html { height: 101%; } /* always display scrollbars */
   
@@ -10,3 +12,39 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   img { border: 0; max-width: 100%; }
   
   a { text-decoration: none; }
+
+  // BASIC STYLES OFF ^^^^^
+
+header {
+  background-color: rgba(12, 12, 14, 1);
+}
+
+.header-wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  p {
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: lighter;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin: 0px 10px;
+    }
+    a {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: rgba(255, 255, 255, 1);
+      &:hover{
+        color: rgba(187, 148, 95, 1);
+      }
+    }
+  }
+}
