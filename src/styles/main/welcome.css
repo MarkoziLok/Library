@@ -3,9 +3,10 @@
 }
   
 .welcome-wrapper {
-    background-image: url('../../images/main/background-image.jpg');
+    background-image: url('../../images/main/welcome/background-image.jpg');
+    max-width: 1440px;
     height: 575px;
-    margin: auto 0;
+    margin: 0 auto;
     display: flex;
     align-items: center;
 }
