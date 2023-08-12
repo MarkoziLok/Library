@@ -1,0 +1,137 @@
+.favorites-section {
+    padding: 0 20px;
+}
+
+.favorites-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites-title {
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 20px 0 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(12, 12, 14);
+}
+
+.favorites-text {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 100%;
+}
+
+.favorites-buttons-wrapper {
+    margin: 40px 0;
+    display: flex;
+    width: 100%;
+}
+
+.favorites-button-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+}
+
+.favorites-button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.favorites-button-season {
+    font-family: Inter;
+    font-size: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.favorites-books-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.favorites-book {
+    display: flex;
+    border: 1px solid rgb(12, 12, 14);
+    padding: 20px;
+    margin-bottom: 40px;
+    }
+
+.favorites-book-content-wrapper {
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.favorites-book-img {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    top: 275px;
+    left: 60px;
+}
+
+.favorites-books-staff-picks {
+    font-family: Forum;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(187, 148, 95);
+}
+
+.favorites-book-name {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.favorites-book-overwiew {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: capitalize;
+    width: 355px;
+    height: 320px;
+}
+
+.favorites-book-buy {
+    width: 75px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.favorites-book-buy:hover {
+    color: white;
+    background-color: rgb(187, 148, 95);
+}

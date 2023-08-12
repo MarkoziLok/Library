@@ -1,0 +1,105 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: Forum, serif;
+  text-align: left;
+}
+
+html {
+  height: 101%;
+} /* always display scrollbars */
+ol, ul {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url(./fonts/forum/Forum-Regular.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+.footer {
+  background: rgb(12, 12, 14);
+}
+
+.footer-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-first-content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-first-content-wrapper .footer-address {
+  width: 229px;
+  margin: 20px 0;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.footer-first-content-wrapper .footer-work-day {
+  width: 149px;
+  margin: 20px 0;
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: right;
+}
+
+.footer-social {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.footer-social:hover {
+  transform: scale(1.2);
+}
+
+.footer-line {
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.footer-last-content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-last-content-wrapper p {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 40px 0;
+}
+.footer-last-content-wrapper .rss-link {
+  color: white;
+}
+.footer-last-content-wrapper .rss-link:hover {
+  color: #bb945f;
+}/*# sourceMappingURL=style.css.map */
