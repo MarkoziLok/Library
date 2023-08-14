@@ -53,6 +53,16 @@
     margin-bottom: 20px;
 }
 
+.contacts-section-content-wrapper a {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #bb945f;
+}
+
 .contacts-section-content-director {
     font-family: Inter;
     font-size: 20px;
@@ -61,10 +71,4 @@
     letter-spacing: 2px;
     text-align: left;
     margin-top: 20px;
-}
-
-.map-link:hover {
-    border: 1px solid #bb945f;
-    width: 696px;
-    height: 414px;
 }

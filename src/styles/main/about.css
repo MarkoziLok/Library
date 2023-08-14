@@ -1,57 +1,64 @@
 .about-wrapper {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-  }
-  
-  .about-title {
-    font-family: Forum;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 2px;
-    text-align: left;
-    padding-bottom: 20px;
-    border-bottom: solid 1px rgb(12, 12, 14);
-    margin-bottom: 40px;
-  }
-  
-  .about-text {
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 40px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .about-carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .carousel-img {
-    padding: 0 10px;
-  }
-  
-  .carousel-buttons-wrapper {
-    margin: 30px 0 0px 0;
-  }
-  
-  .carousel-button {
-    margin: 0px 2px;
-    width: 16px;
-    height: 16px;
-    background-color: rgb(12, 12, 14);
-    border-radius: 50%;
-    border: 0;
-    cursor: pointer;
-  }
-  .carousel-button:hover {
-    background-color: #BB945F;
-  }
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.about-title {
+  font-family: Forum;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: left;
+  padding-bottom: 20px;
+  border-bottom: solid 1px rgb(12, 12, 14);
+  margin-bottom: 40px;
+}
+
+.about-text {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+}
+
+.about-carousel-img-wrapper {
+  height: 560px; 
+  overflow: hidden;
+  display: flex;
+}
+
+.carousel-img {
+  padding: 0 25px 0 0px;
+}
+
+.carousel-buttons-wrapper {
+  margin: 30px 0 0px 0;
+}
+
+.carousel-button {
+  margin: 0px 2px;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(12, 12, 14);
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
+}
+.carousel-button:hover {
+  background-color: #BB945F;
+}

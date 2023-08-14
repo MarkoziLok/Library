@@ -43,14 +43,21 @@
     margin-right: 75px;
 }
 
-.favorites-button {
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.favorites-button-input {
     width: 16px;
     height: 16px;
-    border-radius: 50%;
-    border: 2px solid rgb(0, 0, 0);
-    background-color: white;
     cursor: pointer;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 25px;
+}
+
+input:checked{
+    color: black;
 }
 
 .favorites-button-season {
@@ -58,6 +65,7 @@
     font-size: 20px;
     letter-spacing: 0em;
     text-align: left;
+    margin-right: 90px;
 }
 
 .favorites-books-wrapper {
@@ -72,7 +80,8 @@
     border: 1px solid rgb(12, 12, 14);
     padding: 20px;
     margin-bottom: 40px;
-    }
+    max-width: 550px;
+}
 
 .favorites-book-content-wrapper {
     height: 555px;
@@ -86,7 +95,7 @@
     height: 300px;
     position: relative;
     top: 275px;
-    left: 60px;
+    left: 20px;
 }
 
 .favorites-books-staff-picks {
@@ -131,7 +140,19 @@
     font-weight: 700;
     cursor: pointer;
 }
+
 .favorites-book-buy:hover {
     color: white;
     background-color: rgb(187, 148, 95);
+}
+
+.favorites-book-own {
+    width: 75px;
+    height: 30px;
+    border: 1px solid rgb(187, 148, 95);
+    color: rgb(187, 148, 95);
+    background-color: white;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
 }

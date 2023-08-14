@@ -20,7 +20,7 @@
 
     <header>
         <div class="header-wrapper">
-            <p class="header-title">Brooklyn Public Library</p>
+            <h1 class="header-title">Brooklyn Public Library</h1>
             <nav>
                 <ul class="nav-bar">
                     <li class="nav-li"><a href="#one" class="nav-link">About</a></li>
@@ -39,11 +39,11 @@
         <div class="welcome-section">
             <div class="welcome-wrapper">
                 <div class="welcome-block">
-                    <h1 class="welcome-title">
+                    <p class="welcome-title">
                         Welcome
                         to the Brooklyn 
                         Library
-                    </h1>
+                    </p>
                 </div>
             </div>
         </div>
@@ -57,8 +57,8 @@
                         <img class="carousel-img" src="./src/images/main/about/image-1.jpg" alt="girl-in-library">
                         <img class="carousel-img" src="./src/images/main/about/image-2.jpg" alt="modern">
                         <img class="carousel-img" src="./src/images/main/about/image-3.jpg" alt="library">
-                        <!-- <img src="" alt="">
-                        <img src="" alt=""> -->
+                        <img class="carousel-img" src="./src/images/main/about/image_4.jpg" alt="books">
+                        <img class="carousel-img" src="./src/images/main/about/image_5.jpg" alt="columns">
                     </div>
                     <div class="carousel-buttons-wrapper">
                         <button class="carousel-button"></button>
@@ -74,29 +74,21 @@
                 <h4 class="favorites-title">Favorites</h4>
                 <p class="favorites-text">Pick favorites of season</p>
                 <div class="favorites-buttons-wrapper">
-                    <div class="favorites-button-wrapper">
-                        <button class="favorites-button">
-                            <div class="favorites-button-on"></div>
-                        </button>
-                        <span class="favorites-button-season">Winter</span>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="season" class="favorites-button-input" id="winter" checked>
+                        <label for="winter" class="favorites-button-season">Winter</label>
                     </div>
-                    <div class="favorites-button-wrapper">
-                        <button class="favorites-button">
-                            <div class="favorites-button-on"></div>
-                        </button>
-                        <span class="favorites-button-season">Spring</span>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="season" class="favorites-button-input" id="spring">
+                        <label for="spring" class="favorites-button-season">Spring</label>
                     </div>
-                    <div class="favorites-button-wrapper">
-                        <button class="favorites-button">
-                            <div class="favorites-button-on"></div>
-                        </button>
-                        <span class="favorites-button-season">Summer</span>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="season" class="favorites-button-input" id="summer">
+                        <label for="summer" class="favorites-button-season">Summer</label>
                     </div>
-                    <div class="favorites-button-wrapper">
-                        <button class="favorites-button">
-                            <div class="favorites-button-on"></div>
-                        </button>
-                        <span class="favorites-button-season">Autumn</span>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="season" class="favorites-button-input" id="autumn">
+                        <label for="autumn" class="favorites-button-season">Autumn</label>                        
                     </div>
                 </div>
                 <div class="favorites-books-wrapper">
@@ -193,7 +185,7 @@
                                 modern world has changed around 
                                 them.
                             </p>
-                            <button class="favorites-book-buy">Buy</button>
+                            <button class="favorites-book-own">Own</button>
                         </div>
                         <img src="./src/images/main/favorites/book_4.jpg" alt="book" class="favorites-book-img">
                     </div>
@@ -291,12 +283,12 @@
                     <div class="contacts-section-content-wrapper">
                         <h8 class="contacts-section-content-title">For all Library inquiries:</h8>
                         <div class="contacts-section-content-phones-wrapper">
-                            <p class="contacts-section-content-phone">Please call (617) 730-2370</p>
-                            <p class="contacts-section-content-phone">For TTY service, please call (617) 730-2370</p>
-                            <p class="contacts-section-content-phone">Putterham Library: (617) 730-2385</p>
+                            <p class="contacts-section-content-phone">Please call <a class="tel-num" href="tel:+(617) 730-2370">(617) 730-2370</a></p>
+                            <p class="contacts-section-content-phone">For TTY service, please call <a class="tel-num" href="tel:+(617) 730-2370">(617) 730-2370</a></p>
+                            <p class="contacts-section-content-phone">Putterham Library: <a class="tel-num" href="tel:+(617) 730-2385">(617) 730-2385</a></p>
                         </div>
                         <h8 class="contacts-section-content-title">Senior Staff</h8>
-                        <p class="contacts-section-content-director">Library Director: Amanda Hirst</p>
+                        <p class="contacts-section-content-director">Library Director: <a href="mailto:AmandaHirst@gmail.com">Amanda Hirst</a></p>
                     </div>
                     <a class="map-link" href="https://www.google.com/maps/place/286+Cadman+Plaza+W,+Brooklyn,+NY+11201,+%D0%A1%D0%A8%D0%90/@40.6956458,-73.9912976,17z/data=!3m1!4b1!4m6!3m5!1s0x89c25a49b649b8c3:0x6342a2291cea2e!8m2!3d40.6956458!4d-73.9912976!16s%2Fg%2F11s2lgz8ns?entry=ttu" target="_blank"><img class="map-img" src="./src/images/main/contacts/map.jpg" alt="map"></a>
                 </div>
@@ -309,14 +301,14 @@
                 <div class="library-card-content-wrapper">
                     <div class="library-card-find-content-wrapper">
                         <h5 class="library-card-find-title">Find your Library card</h5>
-                        <div class="library-card-find-wrapper">
+                        <form class="library-card-find-wrapper">
                             <div class="library-card-find-gold-inputs-wrapper">
                                 <p class="library-card-find-gold-title">Brooklyn Public Library</p>
                                 <input class="library-card-find-input" type="text" value="Reader's name">
                                 <input class="library-card-find-input" type="text" value="Card Number">
                             </div>
                             <button class="library-card-find-button">Check the card</button>
-                        </div>
+                        </form>
                     </div>
                     <div class="library-card-get-wrapper">
                         <h6 class="library-card-get-title">Get a reader card</h6>
@@ -340,12 +332,12 @@
         <div class="footer-wrapper">
             <div class="footer-first-content-wrapper">
                 <div class="footer-address-and-socials-wrapper">
-                    <div class="footer-addresses">
-                        <p class="footer-address">
+                    <a class="footer-address" href="https://www.google.com/maps/place/286+Cadman+Plaza+W,+Brooklyn,+NY+11201,+%D0%A1%D0%A8%D0%90/@40.6956498,-73.9938725,17z/data=!3m1!4b1!4m6!3m5!1s0x89c25a49b649b8c3:0x6342a2291cea2e!8m2!3d40.6956458!4d-73.9912976!16s%2Fg%2F11s2lgz8ns?entry=ttu" target="_blank">
+                        <p class="footer-addresses">
                             286 Cadman Plaza, New York, 
                             NY 11238, United States
                         </p>
-                    </div>
+                    </a>
                     <div class="footer-socials">
                         <a href="https://twitter.com/?lang=ru" target="_blank"><img src="./src/images/footer/twit.svg" alt="twitt_logo" class="footer-social"></a>
                         <a href="https://www.instagram.com/" target="_blank"><img src="./src/images/footer/inst.svg" alt="inst_logo" class="footer-social"></a>
@@ -367,7 +359,7 @@
             <div class="footer-last-content-wrapper">
                 <p class="footer-year">2023</p>
                 <a class="rss-link" href="https://rs.school/" target="_blank"><p class="footer-rss">The Rolling Scopes</p></a>
-                <p class="footer-name">Username</p>
+                <a class="rss-link" href="https://github.com/MarkoziLok" target="_blank"><p class="footer-name">Mark Loktionov</p></a>
             </div>
         </div>
     </footer>

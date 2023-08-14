@@ -6,7 +6,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   text-align: left;
 }
 
-html { height: 101%; } /* always display scrollbars */
+html { 
+  height: 101%; 
+  scroll-behavior: smooth
+}
+
+a, button, img {
+  transition: 0.3s;
+}
   
 ol, ul { list-style: none; }
 
@@ -25,77 +32,3 @@ a { text-decoration: none; }
 }
 
 // BASIC STYLES OFF ^^^^^
-
-.footer {
-  background: rgba(12, 12, 14, 1);
-}
-
-.footer-wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.footer-first-content-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  .footer-address {
-    width: 229px;
-    margin: 20px 0;
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
-  .footer-work-day {
-    width: 149px;
-    margin: 20px 0;
-    font-family: Inter;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: right;
-  }
-}
-
-.footer-social {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.2);
-  }
-}
-
-.footer-line {
-  border-bottom: 1px solid rgba(255, 255, 255, 1)
-}
-
-.footer-last-content-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  p {
-    font-family: Inter;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 2px;
-    text-align: center;
-    margin: 40px 0;
-  }
-  .rss-link {
-    color: white;
-    &:hover {
-      color: #bb945f;
-    }
-  }
-}
