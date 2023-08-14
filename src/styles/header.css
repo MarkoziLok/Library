@@ -1,0 +1,38 @@
+header {
+    background-color: rgb(12, 12, 14);
+  }
+  
+.header-wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+.header-title {
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: lighter;
+}
+  
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+  
+.nav-li {
+  margin: 0px 10px;
+}
+
+.nav-link {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.nav-link:hover {
+  color: rgb(187, 148, 95);
+}

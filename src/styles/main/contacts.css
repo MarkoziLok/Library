@@ -1,0 +1,74 @@
+.contacts-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contacts-section-title {
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    border-bottom: 1px solid rgb(12, 12, 14);
+    margin-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+.contacts-section-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contacts-section-content-title {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.contacts-section-content-phones-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 40px 0 20px 0;
+}
+
+.contacts-section-content-phone {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contacts-section-content-wrapper a {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #bb945f;
+}
+
+.contacts-section-content-director {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin-top: 20px;
+}
