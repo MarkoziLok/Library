@@ -42,6 +42,12 @@
   display: flex;
 }
 
+.carousel-images-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+}
+
 .carousel-img {
   padding: 0 25px 0 0px;
 }
@@ -63,11 +69,37 @@
   background-color: #BB945F;
 }
 
+.additionally {
+  display: none;
+}
+
+.carousel-arrow {
+  border: none;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 0 40px;
+}
+
+.carousel-arrow:hover {
+  color: #BB945F;
+}
+
 @media (max-width: 1440px) {
-  .about-carousel {
-    max-width: 450px;
+  .about-carousel-img-wrapper {
+    padding-left: 20px;
+    max-width: 490px;
   }
   .about-text {
-    max-width: 720px;
+    max-width: 725px;
+  }
+  .additionally {
+    display: inline;
   }
 }
