@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .library-card-section-title {
@@ -162,4 +163,18 @@ input[type=text] {
 .library-card-get-button:hover {
     background-color: #bb975f;
     color: white;
+}
+
+@media (max-width: 1100px) {
+    .library-card-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .library-card-get-wrapper {
+        margin-top: 20px;
+        align-items: center;
+    }
+    .library-card-get-text {
+        text-align: center;
+    }
 }
