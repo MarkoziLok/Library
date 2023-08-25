@@ -156,3 +156,11 @@ input:checked{
     font-size: 12px;
     font-weight: 700;
 }
+
+@media (max-width: 1250px) {
+    .favorites-books-wrapper {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}

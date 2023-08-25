@@ -85,13 +85,14 @@
   letter-spacing: 0em;
   text-align: center;
   margin: 0 40px;
+  display: none;
 }
 
 .carousel-arrow:hover {
   color: #BB945F;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .about-carousel-img-wrapper {
     padding-left: 20px;
     max-width: 490px;
@@ -100,6 +101,9 @@
     max-width: 725px;
   }
   .additionally {
+    display: inline;
+  }
+  .carousel-arrow {
     display: inline;
   }
 }
