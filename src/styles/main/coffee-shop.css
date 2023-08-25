@@ -103,3 +103,20 @@
     letter-spacing: 2px;
     text-align: left;
 }
+
+@media (max-width: 1439px) {
+    .coffee-shop-wrapper {
+        padding: 0 20px;
+    }
+    .coffee-shop-menu {
+        flex-direction: column;
+    }
+    .coffee-shop-menu-eats {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .coffee-shop-text {
+        max-width: 728px;
+    }
+}

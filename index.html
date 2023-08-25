@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Library</title>
+    <link rel="shortcut icon" href="./src/images/fav.png" type="image/x-icon">
+
     <link rel="stylesheet" href="./src/styles/header.css">
     <link rel="stylesheet" href="./src/styles/main/welcome.css">
     <link rel="stylesheet" href="./src/styles/main/about.css">
@@ -21,16 +24,19 @@
     <header>
         <div class="header-wrapper">
             <h1 class="header-title">Brooklyn Public Library</h1>
-            <nav>
-                <ul class="nav-bar">
-                    <li class="nav-li"><a href="#one" class="nav-link">About</a></li>
-                    <li class="nav-li"><a href="#two" class="nav-link">Favorites</a></li>
-                    <li class="nav-li"><a href="#three" class="nav-link">Coffe Shop</a></li>
-                    <li class="nav-li"><a href="#four" class="nav-link">Contacts</a></li>
-                    <li class="nav-li"><a href="#five" class="nav-link">Library Card</a></li>
-                    <li class="nav-li"><img src="./src/images/header/register-icon.svg" alt="register-icon" class="register-icon"></li>
-                </ul>
-            </nav>
+            <div class="nav-and-sing-logo-wrapper">
+                <nav>
+                    <ul class="nav-bar">
+                        <li class="nav-li"><a href="#one" class="nav-link">About</a></li>
+                        <li class="nav-li"><a href="#two" class="nav-link">Favorites</a></li>
+                        <li class="nav-li"><a href="#three" class="nav-link">Coffe Shop</a></li>
+                        <li class="nav-li"><a href="#four" class="nav-link">Contacts</a></li>
+                        <li class="nav-li"><a href="#five" class="nav-link">Library Card</a></li>
+                    </ul>
+                </nav>
+                <a id="sing-icon" href="#"><img src="./src/images/header/register-icon.svg" alt="register-icon" class="register-icon"></a>
+                <div class="burger"><span class="burger-elem"></span></div>
+            </div>
         </div>
     </header>
 
@@ -53,17 +59,23 @@
                 <h4 class="about-title">About</h4>
                 <p class="about-text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 <div class="about-carousel">
-                    <div class="about-carousel-img-wrapper">
-                        <img class="carousel-img" src="./src/images/main/about/image-1.jpg" alt="girl-in-library">
-                        <img class="carousel-img" src="./src/images/main/about/image-2.jpg" alt="modern">
-                        <img class="carousel-img" src="./src/images/main/about/image-3.jpg" alt="library">
-                        <img class="carousel-img" src="./src/images/main/about/image_4.jpg" alt="books">
-                        <img class="carousel-img" src="./src/images/main/about/image_5.jpg" alt="columns">
+                    <div class="carousel-images-wrapper">
+                        <button class="carousel-arrow"><</button>
+                        <div class="about-carousel-img-wrapper">
+                            <img class="carousel-img" src="./src/images/main/about/image-1.jpg" alt="girl-in-library">
+                            <img class="carousel-img" src="./src/images/main/about/image-2.jpg" alt="modern">
+                            <img class="carousel-img" src="./src/images/main/about/image-3.jpg" alt="library">
+                            <img class="carousel-img" src="./src/images/main/about/image_4.jpg" alt="books">
+                            <img class="carousel-img" src="./src/images/main/about/image_5.jpg" alt="columns">
+                        </div>
+                        <button class="carousel-arrow">></button>
                     </div>
                     <div class="carousel-buttons-wrapper">
                         <button class="carousel-button"></button>
                         <button class="carousel-button"></button>
                         <button class="carousel-button"></button>
+                        <button class="carousel-button additionally"></button>
+                        <button class="carousel-button additionally"></button>
                     </div>
                 </div>
             </div>
