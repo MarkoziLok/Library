@@ -17,6 +17,11 @@ header {
   line-height: 50px;
   font-weight: lighter;
 }
+
+.nav-and-sing-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
   
 .nav-bar {
   display: flex;
@@ -35,4 +40,65 @@ header {
 
 .nav-link:hover {
   color: rgb(187, 148, 95);
+}
+
+#sing-icon {
+  margin: 5px 0 0 40px;
+}
+
+#sing-icon:hover {
+  transition: 0.3s;
+  margin-bottom: 3px;
+}
+
+/* BURGER-MENU WIDTH - 900PX */
+
+.burger {
+  height: 20px;
+  display: none;
+  margin-left: 40px;
+}
+
+.burger-elem {
+  display: block;
+  box-sizing: content-box;
+  content: '';
+  width: 45px;
+  height: 3px;
+  border: 2px;
+  background-color: white;
+}
+
+.burger-elem:after {
+  display: block;
+  box-sizing: content-box;
+  content: '';
+  width: 45px;
+  height: 3px;
+  border: 2px;
+  background-color: white;
+  margin-top: 7px;
+}
+
+.burger-elem:before {
+  display: block;
+  box-sizing: content-box;
+  content: '';
+  width: 45px;
+  height: 3px;
+  border: 2px;
+  background-color: white;
+  margin-top: 10px;
+}
+
+@media (max-width: 950px) {
+  .burger {
+    display: flex;
+  }
+  nav {
+    display: none;
+  }
+  #sing-icon {
+    margin-top: 7px;
+  }
 }

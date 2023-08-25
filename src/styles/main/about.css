@@ -62,3 +62,12 @@
 .carousel-button:hover {
   background-color: #BB945F;
 }
+
+@media (max-width: 1440px) {
+  .about-carousel {
+    max-width: 450px;
+  }
+  .about-text {
+    max-width: 720px;
+  }
+}
