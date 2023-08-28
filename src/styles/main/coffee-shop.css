@@ -120,3 +120,41 @@
         max-width: 728px;
     }
 }
+
+@media (max-width: 500px) {
+    .coffee-shop-title {
+        font-size: 26px;
+    }
+    .coffee-shop-text {
+        font-size: 12px;
+    }
+    .coffee-shop-menu-drinks-title {
+        font-size: 32px;
+    }
+    .coffee-shop-menu-eats-title {
+        font-size: 32px;
+    }
+    .coffee-shop-menu-drink-name {
+        font-size: 12px;
+    }
+    .coffee-shop-menu-drink-price {
+        font-size: 12px;
+    }
+    .coffee-shop-menu-drink {
+        width: 275px;
+        margin: 20px 0;
+    }
+    .coffee-shop-menu-line {
+        display: none;
+    }
+    .coffee-shop-menu-eat-name {
+        font-size: 12px;
+    }
+    .coffee-shop-menu-eat-price {
+        font-size: 12px;
+    }
+    .coffee-shop-menu-eat {
+        width: 275px;
+        margin: 20px 0;
+    }
+}

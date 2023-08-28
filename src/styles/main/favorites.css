@@ -168,8 +168,83 @@ input:checked{
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
     .favorites-button-season{
         margin-right: 40px;
+    }
+}
+
+@media (max-width: 620px) {
+    .favorites-button-season{
+        margin-right: 10px;
+    }
+    .favorites-book-img {
+        width: 90px;
+        height: 120px;
+        top: 455px;
+    }
+}
+
+@media (max-width: 550px) {
+    .favorites-book-img {
+        left: -35px;
+    }
+}
+
+@media (max-width: 500px) {
+    .favorites-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+    .favorites-text {
+        font-size: 16px;
+    }
+    .favorites-book-content-wrapper {
+        height: 425px;
+    }
+    .favorites-button-season {
+        font-size: 16px;
+    }
+    .favorites-button-input {
+        margin-right: 7px;
+    }
+    .favorites-books-staff-picks {
+        font-size: 16px;
+        width: 275px;
+    }
+    .favorites-book-name {
+        font-size: 11px;
+    }
+    .favorites-book-overwiew {
+        font-size: 10px;
+        line-height: 30px;
+        height: 160px;
+    }
+    .favorites-book-img {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .favorites-title {
+        font-size: 26px;
+    }
+    .favorites-books-wrapper {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .favorites-book {
+        max-width: 300px;
+    }
+    .favorites-book-overwiew {
+        width: 275px;
+        font-size: 8px;
+    }
+    .favorites-button-season {
+        font-size: 12px;
+    }
+    .favorites-books-staff-picks {
+        width: 200px;
     }
 }

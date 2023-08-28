@@ -178,3 +178,51 @@ input[type=text] {
         text-align: center;
     }
 }
+
+@media (max-width: 600px) {
+    .library-card-find-wrapper {
+      max-width: 300px;
+      max-height: 387px;
+    }
+    .library-card-find-gold-inputs-wrapper {
+      width: 275px;
+    }
+    .library-card-find-gold-title {
+      font-size: 20px;
+    }
+    .library-card-find-input {
+        outline: 0;
+        width: 250px;
+        height: 45px;
+        margin: 0 auto;
+        border: 0;
+        border-radius: 10px;
+    }
+    .library-card-find-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .library-card-section-title {
+        font-size: 26px;
+    }
+    .library-card-find-title {
+        font-size: 22px;
+    }
+    input[type=text] {
+        font-size: 16px;
+    }
+    .library-card-find-button {
+        width: 175px;
+        font-size: 16px;
+    }
+    .library-card-get-title {
+        font-size: 22px;
+    }
+    .library-card-get-text {
+        font-size: 16px;
+    }
+}
