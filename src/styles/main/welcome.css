@@ -31,3 +31,15 @@
     padding: 0% 25%;
     max-width: 575px;
 }
+
+@media (max-width: 500px) {
+    .welcome-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 350px) {
+    .welcome-title {
+        font-size: 22px;
+    }
+}

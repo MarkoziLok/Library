@@ -82,3 +82,54 @@
         margin: 40px auto;
     }
 }
+
+@media (max-width: 540px) {
+    .contacts-section-content-phone {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contacts-section-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .contacts-section-content-title {
+        font-size: 16px;
+    }
+    .contacts-section-content-wrapper a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    .contacts-section-content-phone{
+        font-size: 12px;
+    }
+    .contacts-section-content-title {
+        font-size: 12px;
+    }
+    .contacts-section-content-wrapper a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 365px) {
+    .contacts-section-content-phone{
+        font-size: 8px;
+    }
+    .contacts-section-content-title {
+        font-size: 8px;
+    }
+    .contacts-section-content-wrapper a {
+        font-size: 8px;
+    }
+    .contacts-section-content-phones-wrapper {
+        margin-top: 0;
+    }
+    .contacts-section-content-phone {
+        margin-bottom: 0;
+    }
+}
