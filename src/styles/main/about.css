@@ -111,7 +111,7 @@
 @media (max-width: 650px) {
   .about-carousel-img-wrapper {
     max-width: 250px;
-    max-height: 320px;
+    max-height: 256px;
   }
 }
 
@@ -141,8 +141,8 @@
     margin-bottom: 10px;
   }
   .about-carousel-img-wrapper {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 200px;
+    max-height: 200px;
   }
   .carousel-button {
     width: 12px;
@@ -150,5 +150,8 @@
   }
   .carousel-arrow {
     margin: 0 20px;
+  }
+  .carousel-buttons-wrapper {
+    display: none;
   }
 }
