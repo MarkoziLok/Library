@@ -35,6 +35,7 @@
 @media (max-width: 500px) {
     .welcome-title {
         font-size: 26px;
+        line-height: 35px;
     }
 }
 
