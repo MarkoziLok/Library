@@ -105,14 +105,23 @@
 }
 
 @media (max-width: 450px) {
+    .contacts-section-content-phones-wrapper {
+        margin-top: 20px;
+    }
     .contacts-section-content-phone{
         font-size: 12px;
+        margin-bottom: 0;
     }
     .contacts-section-content-title {
         font-size: 12px;
     }
     .contacts-section-content-wrapper a {
         font-size: 12px;
+    }
+    
+    .contacts-section-content-director {
+        font-size: 12px;
+        margin-top: 0;
     }
 }
 

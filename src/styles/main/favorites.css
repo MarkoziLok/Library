@@ -195,13 +195,15 @@ input:checked{
     .favorites-title {
         font-size: 32px;
         margin-bottom: 30px;
-        padding-bottom: 10px;
     }
     .favorites-text {
         font-size: 16px;
     }
     .favorites-book-content-wrapper {
         height: 425px;
+    }
+    .favorites-buttons-wrapper {
+        margin: 25px 0;
     }
     .favorites-button-season {
         font-size: 16px;
@@ -238,9 +240,13 @@ input:checked{
         max-width: 300px;
         padding: 20px 0 20px 20px;
     }
+    .favorites-book-name {
+        line-height: 35px;
+    }
     .favorites-book-overwiew {
         width: 260px;
         font-size: 8px;
+        line-height: 25px;
     }
     .favorites-button-season {
         font-size: 12px;
