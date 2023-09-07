@@ -36,3 +36,9 @@ a {
   font-family: "Inter";
   src: url(./fonts/inter/Inter-VariableFont_slnt\,wght.ttf);
 }
+
+@media (max-width: 950px) {
+  .none {
+    display: none;
+  }
+}

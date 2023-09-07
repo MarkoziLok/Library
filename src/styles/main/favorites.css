@@ -75,6 +75,10 @@ input:checked{
     padding-right: 40px;
 }
 
+.spring, .autumn, .summer {
+    display: none;
+}
+
 .favorites-book {
     display: flex;
     border: 1px solid rgb(12, 12, 14);
