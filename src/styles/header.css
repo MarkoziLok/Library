@@ -95,9 +95,6 @@ header {
   .burger {
     display: flex;
   }
-  nav {
-    display: none;
-  }
   #sing-icon {
     margin-top: 7px;
   }
