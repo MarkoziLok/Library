@@ -67,6 +67,7 @@ header {
   height: 3px;
   border: 2px;
   background-color: white;
+  transition: 0.3s;
 }
 
 .burger-elem:after {
@@ -90,6 +91,55 @@ header {
   background-color: white;
   margin-top: 10px;
 }
+
+@media (max-width: 950px) {
+  .burger, #sing-icon {
+    z-index: 1;
+  }
+  .nav-bar {
+    position: absolute;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0c0c0e;
+    width: 100vh;
+    height: 100vh;
+    z-index: 0;
+    padding-top: 25vh;
+    transition: 0.3s;
+  }
+  .nav-li {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+  .non-scroll {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 950px) {
+  .nav-none {
+    top: -100%
+  }
+}
+
+/* burger rotate */
+
+.rotate {
+  rotate: 90deg;
+  transition: 0.3s;
+}
+
+.rotate-pad {
+  padding-top: 10px;
+}
+
+/* media qeries for adaptive */
 
 @media (max-width: 950px) {
   .burger {
