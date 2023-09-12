@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 10px;
+  padding: 20px 20px;
 }
 
 .header-title {
@@ -26,6 +26,7 @@ header {
 .nav-bar {
   display: flex;
   align-items: center;
+  margin-right: 40px;
 }
   
 .nav-li {
@@ -42,13 +43,76 @@ header {
   color: rgb(187, 148, 95);
 }
 
-#sing-icon {
-  margin: 5px 0 0 40px;
+/* IN DROP-MENU */
+
+.drop-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-#sing-icon:hover {
-  transition: 0.3s;
-  margin-bottom: 3px;
+.register-icon {
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+}
+
+.drop-menu-no-auth {
+  width: 80px;
+  height: 115px;
+  background-color: white;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 15px;
+}
+
+.drop-menu-auth {
+  width: 80px;
+  height: 115px;
+  background-color: white;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 15px;
+}
+
+.drop-menu-title {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0c0c0e;
+
+  border-bottom: solid 1px #bb945f;
+  padding-bottom: 5px;
+}
+
+.drop-menu-link {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.drop-menu-link:hover {
+  color: #bb945f;
+}
+
+.none {
+  display: none;
 }
 
 /* BURGER-MENU WIDTH - 900PX */

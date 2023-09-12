@@ -34,7 +34,19 @@
                         <li class="nav-li"><a href="#five" class="nav-link">Library Card</a></li>
                     </ul>
                 </nav>
-                <a id="sing-icon" href="#"><img src="./src/images/header/register-icon.svg" alt="register-icon" class="register-icon"></a>
+                <div class="drop-menu">
+                    <img src="./src/images/header/register-icon.svg" alt="register-icon" class="register-icon">
+                    <div class="drop-menu-no-auth none">
+                        <p class="drop-menu-title">Profile</p>
+                        <a class="drop-menu-link log-in" href="#">Log In</a>
+                        <a class="drop-menu-link register" href="#">Register</a>
+                    </div>
+                    <div class="drop-menu-auth none">
+                        <p class="drop-menu-title">Profile</p>
+                        <a class="drop-menu-link profile" href="#">My Profile</a>
+                        <a class="drop-menu-link log-out" href="#">Log Out</a>
+                    </div>
+                </div>
                 <div class="burger"><span class="burger-elem"></span></div>
             </div>
         </div>
@@ -662,11 +674,11 @@
             </div>
         </div>
     </footer>
-
-    <script src="./src/scripts/burger.js"></script>
     
 </body>
 
+<script type="module" src="./src/scripts/burger.js"></script>
+<script type="module" src="./src/scripts/drop-menu.js"></script>
 <script src="./src/index.js"></script>
 
 </html>
