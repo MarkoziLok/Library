@@ -105,14 +105,11 @@ header {
   line-height: 20px;
   letter-spacing: 0em;
   text-align: center;
+  color: #0c0c0e;
 }
 
 .drop-menu-link:hover {
   color: #bb945f;
-}
-
-.none {
-  display: none;
 }
 
 /* BURGER-MENU WIDTH - 900PX */
@@ -201,6 +198,162 @@ header {
 
 .rotate-pad {
   padding-top: 10px;
+}
+
+/* Modals */
+
+.modal-log-in {                                     /* Modal log in */
+  width: 250px;
+  height: 262px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-log-in-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 160px;
+}
+
+.modal-log-in-title {
+  font-family: Forum;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #0c0c0e;
+  margin-top: 20px;
+}
+
+.modal-log-in-email-title {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #0c0c0e;
+}
+
+.modal-log-in-pass-title {
+  font-family: Inter;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: #0c0c0e;
+}
+
+.modal-log-in-btn {
+  width: 75px;
+  height: 30px;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: white;
+  border: solid 1px rgb(12, 12, 14, 14);
+  cursor: pointer;
+}
+
+.modal-log-in-btn:hover {
+  border: solid 1px #bb945f;
+  color: #bb945f;
+}
+
+.modal-none-acc-wrapper {
+  display: flex;
+  width: 200px;
+}
+
+.modal-none-acc-ask {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0c0c0e;
+  margin-right: 10px;
+}
+
+.modal-none-acc-register {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #0c0c0e;
+  border-bottom: solid 1px #0c0c0e;
+}
+
+.modal-none-acc-register:hover {
+  color: #bb945f;
+  border-bottom: solid 1px #bb945f;
+}
+
+.modal-input {
+  border: solid 1px #bb945f;
+  margin-top: 10px;
+  width: 200px;
+  height: 20px;
+  padding-left: 5px;
+  color: #0c0c0e;
+}
+
+.modal-register {                                     /* Modal register */
+  width: 250px;
+  height: 382px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-register-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  height: 280px;
+}
+
+
+.modal-alredy-acc-log-in {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #0c0c0e;
+  border-bottom: solid 1px #0c0c0e;
+}
+
+.modal-alredy-acc-log-in:hover {
+  color: #bb945f;
+  border-bottom: solid 1px #bb945f;
 }
 
 /* media qeries for adaptive */

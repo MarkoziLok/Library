@@ -28,6 +28,35 @@ a {
   text-decoration: none;
 }
 
+/* cross for modal */
+
+.modal-cross { 
+  cursor: pointer; 
+  position: absolute; 
+  top: 20px; 
+  right: 35px;
+}
+
+.modal-cross:before, .modal-cross:after {
+  content: ""; 
+  position: absolute; 
+  width: 24px; 
+  height: 4px; 
+  background: #0c0c0e
+}
+
+.modal-cross:before {
+  transform: rotate(45deg);
+}
+
+.modal-cross:after {
+  transform: rotate(-45deg);
+}
+
+.none {
+  display: none;
+}
+
 @font-face {
   font-family: "Forum";
   src: url(./fonts/forum/Forum-Regular.ttf);
