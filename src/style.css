@@ -61,6 +61,10 @@ a {
   overflow: hidden;
 }
 
+.non-correct {
+  color: red;
+}
+
 @font-face {
   font-family: "Forum";
   src: url(./fonts/forum/Forum-Regular.ttf);

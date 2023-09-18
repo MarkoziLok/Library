@@ -24,6 +24,15 @@ let lastName = document.getElementById('last-name');
 let logInModalBtn = document.querySelector('.modal-log-in-btn');
 let regInModalBtn = document.querySelector('.modal-reg-btn');
 
+let logPassTitle = document.querySelector('.modal-log-in-pass-title');
+let logEmailTitle = document.querySelector('.modal-log-in-email-title');
+let firstTitle = document.querySelector('.first-title');
+let lastTitle = document.querySelector('.last-title');
+let regPassTitle = document.querySelector('.reg-pass-title');
+let regEmailTitle = document.querySelector('.reg-email-title');
+
+
+
 import { burger, burgerElem, body, navBar } from "./burger.js";
 
 icon.addEventListener('click', () => {
@@ -96,15 +105,32 @@ window.addEventListener('click', (e) => {
 }); // close modal if click none on modal
 
 logInModalBtn.addEventListener('click', () => {
-    logPass.value.length < 8 ? alert('Error: Password < 8 symbols') : console.log('Ok');
-    logEmail.value.length < 1 ? alert('Error: Please, add you Email') : console.log('Ok');
+    logPass.value.length < 8 
+    ? logPassTitle.classList.add('non-correct')
+    : logPassTitle.classList.remove('non-correct');
+    logEmail.value.length <= 6 
+    && regEmail.value.indexOf('@') == -1
+    && regEmail.value.indexOf('.') == -1
+    ? logEmailTitle.classList.add('non-correct')
+    : logEmailTitle.classList.remove('non-correct');
 })
 
 regInModalBtn.addEventListener('click', () => {
-    regPass.value.length < 8 ? alert('Error: Password < 8 symbols') : console.log('Ok');
-    regEmail.value.length < 1 
-    || firstName.value.length < 1 
-    || lastName.value.length < 1 
-    ? alert('Error: Please, fill in all required fields') 
-    : console.log('Ok')
+    regEmail.value.length <= 6 
+    && regEmail.value.indexOf('@') == -1
+    && regEmail.value.indexOf('.') == -1
+    ? regEmailTitle.classList.add('non-correct')
+    : regEmailTitle.classList.remove('non-correct');
+})
+
+regInModalBtn.addEventListener('click', () => {
+    regPass.value.length < 8
+    ? regPassTitle.classList.add('non-correct')
+    : regPassTitle.classList.remove('non-correct');
+    firstName.value.length < 1
+    ? firstTitle.classList.add('non-correct')
+    : firstTitle.classList.remove('non-correct');
+    lastName.value.length < 1
+    ? lastTitle.classList.add('non-correct')
+    : lastTitle.classList.remove('non-correct');
 })
