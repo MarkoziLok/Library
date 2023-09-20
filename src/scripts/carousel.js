@@ -12,6 +12,13 @@ for (let i = 0; i < commonBtn.length; i++) {
         if (i == 0) {
     
             scrollCarousel.classList.remove('slideOne', 'slideTwo', 'slideThree', 'slideFour');
+
+            commonBtn[i].classList.add('carousel-button-active')
+            commonBtn[i + 1].classList.remove('carousel-button-active')
+            commonBtn[i + 2].classList.remove('carousel-button-active')
+            commonBtn[i + 3].classList.remove('carousel-button-active')
+            commonBtn[i + 4].classList.remove('carousel-button-active')
+
             possition = i;
     
         } else {
@@ -20,19 +27,43 @@ for (let i = 0; i < commonBtn.length; i++) {
                 scrollCarousel.classList.add('slideOne')
                 scrollCarousel.classList.remove('slideTwo', 'slideThree', 'slideFour')
 
+                commonBtn[i].classList.add('carousel-button-active')
+                commonBtn[i - 1].classList.remove('carousel-button-active')
+                commonBtn[i + 1].classList.remove('carousel-button-active')
+                commonBtn[i + 2].classList.remove('carousel-button-active')
+                commonBtn[i + 3].classList.remove('carousel-button-active')
+
                 possition = i;
             } else if (i == 2) {
                 scrollCarousel.classList.add('slideTwo')
                 scrollCarousel.classList.remove('slideThree', 'slideFour')
+
+                commonBtn[i].classList.add('carousel-button-active')
+                commonBtn[i - 1].classList.remove('carousel-button-active')
+                commonBtn[i - 2].classList.remove('carousel-button-active')
+                commonBtn[i + 1].classList.remove('carousel-button-active')
+                commonBtn[i + 2].classList.remove('carousel-button-active')
 
                 possition = i;
             } else if (i == 3) {
                 scrollCarousel.classList.add('slideThree')
                 scrollCarousel.classList.remove('slideFour')
 
+                commonBtn[i].classList.add('carousel-button-active')
+                commonBtn[i - 1].classList.remove('carousel-button-active')
+                commonBtn[i - 2].classList.remove('carousel-button-active')
+                commonBtn[i - 3].classList.remove('carousel-button-active')
+                commonBtn[i + 1].classList.remove('carousel-button-active')
+
                 possition = i;
             } else {
                 scrollCarousel.classList.add('slideFour')
+
+                commonBtn[i].classList.add('carousel-button-active')
+                commonBtn[i - 1].classList.remove('carousel-button-active')
+                commonBtn[i - 2].classList.remove('carousel-button-active')
+                commonBtn[i - 3].classList.remove('carousel-button-active')
+                commonBtn[i - 4].classList.remove('carousel-button-active')
                 
                 possition = i;
             }

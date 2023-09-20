@@ -94,6 +94,7 @@
 
 .carousel-arrow:hover {
   color: #BB945F;
+  cursor: pointer;
 }
 
 .slideOne {
