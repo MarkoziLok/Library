@@ -170,6 +170,18 @@
     width: 275px;
     font-size: 12px;
   }
+  .slideOne {
+    margin-left: -180px;
+  }
+  .slideTwo {
+    margin-left: -360px;
+  }
+  .slideThree {
+    margin-left: -540px;
+  }
+  .slideFour {
+    margin-left: -720px;
+  }
 }
 
 @media (max-width: 450px) {
