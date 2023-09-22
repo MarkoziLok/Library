@@ -15,6 +15,7 @@ let logEmailTitle = document.querySelector('.modal-log-in-email-title');
 
 // log in lets
 
+
 let regModal = document.querySelector('.modal-register');
 let regInInDropMenuBtn = document.querySelector('.register');
 
@@ -29,12 +30,20 @@ let lastName = document.getElementById('last-name');
 
 let regInModalBtn = document.querySelector('.modal-reg-btn');
 
+// reg lets
+
+let cardSingUpBtn = document.querySelector('.card-sing-up');
+let cardLogInBtn = document.querySelector('.card-log-in');
+let buyBtn = document.querySelectorAll('.favorites-book-buy')
+
+// buttons in card section & buy buttons
+
 let firstTitle = document.querySelector('.first-title');
 let lastTitle = document.querySelector('.last-title');
 let regPassTitle = document.querySelector('.reg-pass-title');
 let regEmailTitle = document.querySelector('.reg-email-title'); 
 
-// reg lets
+// inputs
 
 logInInDropMenuBtn.addEventListener('click', () => {
     logModal.classList.toggle('none');
@@ -48,6 +57,8 @@ regInInDropMenuBtn.addEventListener('click', () => {
     regStat === true ? menuAuth.classList.toggle('none') : menuNoAuth.classList.toggle('none')
 });
 
+// open sing and reg modal
+
 logInModal.addEventListener('click', () => {
     logModal.classList.remove('none');
     regModal.classList.add('none');
@@ -57,6 +68,8 @@ regInModal.addEventListener('click', () => {
     logModal.classList.add('none');
     regModal.classList.remove('none');
 });
+
+// in modal log in sin
 
 logInModalBtn.addEventListener('click', () => {
     logPass.value.length < 8 
@@ -89,6 +102,27 @@ regInModalBtn.addEventListener('click', () => {
     : lastTitle.classList.remove('non-correct');
 })
 
+// inputs empty error
+
+cardLogInBtn.addEventListener('click', () => {
+    logModal.classList.remove('none');
+    body.classList.add('non-scroll');
+})
+
+cardSingUpBtn.addEventListener('click', () => {
+    regModal.classList.remove('none');
+    body.classList.add('non-scroll');
+})
+
+for (let i = 0; i < buyBtn.length; i++) {
+    buyBtn[i].addEventListener('click', () => {
+        logModal.classList.remove('none');
+        body.classList.add('non-scroll');
+    })
+} 
+
+// buttons in card section open modals
+
 for (let i = 0; i < modalCross.length; i++) {
     modalCross[i].addEventListener('click', () => {
         logModal.classList.add('none');
@@ -104,7 +138,10 @@ window.addEventListener('click', (e) => {
         !target.closest('.modal-log-in') && 
         !target.closest('.modal-register') &&
         !target.closest('.register-icon') &&
-        !target.closest('.drop-menu-link')
+        !target.closest('.drop-menu-link') &&
+        !target.closest('.card-log-in') &&
+        !target.closest('.card-sing-up') &&
+        !target.closest('.favorites-book-buy')
         ) {
             regModal.classList.add('none');
             logModal.classList.add('none');
