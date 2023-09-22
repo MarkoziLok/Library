@@ -75,10 +75,6 @@ input:checked{
     padding-right: 40px;
 }
 
-.spring, .autumn, .summer {
-    display: none;
-}
-
 .favorites-book {
     display: flex;
     border: 1px solid rgb(12, 12, 14);
@@ -143,11 +139,7 @@ input:checked{
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
-}
-
-.favorites-book-buy:hover {
-    color: white;
-    background-color: rgb(187, 148, 95);
+    z-index: 1;
 }
 
 .favorites-book-own {
@@ -159,6 +151,31 @@ input:checked{
     font-family: Inter;
     font-size: 12px;
     font-weight: 700;
+}
+
+.favorites-books-wrapper-all {
+    position: relative;
+}
+
+.spring {
+    position: absolute;
+    max-width: 1400px;
+    top: 0px;
+    left: 0px;
+}
+
+.summer {
+    position: absolute;
+    max-width: 1400px;
+    top: 0px;
+    left: 0px;
+}
+
+.autumn {
+    position: absolute;
+    max-width: 1400px;
+    top: 0px;
+    left: 0px;
 }
 
 @media (max-width: 1250px) {
@@ -182,16 +199,20 @@ input:checked{
     .favorites-button-season{
         margin-right: 10px;
     }
-    .favorites-book-img {
-        width: 90px;
-        height: 120px;
-        top: 455px;
+    .favorites-book {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 0;
+        
     }
-}
-
-@media (max-width: 550px) {
     .favorites-book-img {
-        left: -35px;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 150px;
+        margin-top: -70px;
+        margin-right: -20px;
     }
 }
 
@@ -228,7 +249,7 @@ input:checked{
         height: 160px;
     }
     .favorites-book-img {
-        display: none;
+        margin-top: -70px;
     }
 }
 
@@ -242,7 +263,7 @@ input:checked{
     }
     .favorites-book {
         max-width: 300px;
-        padding: 20px 0 20px 20px;
+        padding: 20px 0 0px 20px;
     }
     .favorites-book-name {
         line-height: 35px;
@@ -261,4 +282,22 @@ input:checked{
     .favorites-book-buy {
         margin-top: 60px;
     }
+    .favorites-book-img {
+        margin-right: 0px;
+    }
+}
+
+.fade-out {
+    opacity: 1;
+    transition: 2s;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: 2s;
+}
+
+.favorites-book-buy:hover {
+    color: white;
+    background-color: rgb(187, 148, 95);
 }
