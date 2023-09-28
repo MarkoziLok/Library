@@ -51,17 +51,19 @@
                 <div class="modal-log-in none">
                     <div class="modal-cross"></div>
                     <h6 class="modal-log-in-title">LOGIN</h6>
-                    <div class="modal-log-in-wrapper">
+                    <form class="modal-log-in-wrapper">
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-email-title">E-mail or readers card</p>
+                            <label class="modal-log-in-email-title">E-mail or readers card</label>
                             <input class="modal-input" type="email" name="email" id="log-email">
+                            <span class="warning warning-log-email non-correct none">Email is not a correct</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-pass-title">Password</p>
+                            <label class="modal-log-in-pass-title">Password</label>
                             <input class="modal-input" type="password" name="pass" id="log-pass">
+                            <span class="warning warning-log-pass non-correct none">Passwors is not a correct</span>
                         </div>
-                        <button class="modal-log-in-btn">Log In</button>
-                    </div>
+                        <input type="submit" value="Log In" class="modal-log-in-btn"></input>
+                    </form>
                     <div class="modal-none-acc-wrapper">
                         <p class="modal-none-acc-ask">Don't have an account?</p>
                         <a href="#" class="modal-none-acc-register">Register</a>
@@ -70,25 +72,29 @@
                 <div class="modal-register none">
                     <div class="modal-cross"></div>
                     <h6 class="modal-log-in-title">REGISTER</h6>
-                    <div class="modal-register-wrapper">
+                    <form class="modal-register-wrapper">
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-email-title first-title">First Name</p>
+                            <label for="first-name" class="modal-log-in-email-title first-title">First Name</label>
                             <input class="modal-input" type="text" name="first-name" id="first-name">
+                            <span class="warning warning-first non-correct none">Enter you first name</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-pass-title last-title">Last Name</p>
+                            <label for="last-name" class="modal-log-in-pass-title last-title">Last Name</label>
                             <input class="modal-input" type="text" name="last-name" id="last-name">
+                            <span class="warning warning-last non-correct none">Enter you last name</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-email-title reg-email-title">E-mail</p>
+                            <label for="email" class="modal-log-in-email-title reg-email-title">E-mail</label>
                             <input class="modal-input" type="email" name="email" id="reg-email">
+                            <span class="warning warning-email non-correct none">Email is not correct</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-pass-title reg-pass-title">Password</p>
+                            <label for="pass" class="modal-log-in-pass-title reg-pass-title">Password</label>
                             <input class="modal-input" type="password" name="pass" id="reg-pass">
+                            <span class="warning warning-pass non-correct none">Password is not correct</span>
                         </div>
-                        <button class="modal-reg-btn">Sing Up</button>
-                    </div>
+                        <input type="submit" value="Sing Up" class="modal-reg-btn"></input>
+                    </form>
                     <div class="modal-none-acc-wrapper">
                         <p class="modal-none-acc-ask">Alredy have an account?</p>
                         <a class="modal-alredy-acc-log-in">Login</a>
@@ -702,11 +708,11 @@
                         <h5 class="library-card-find-title">Find your Library card</h5>
                         <form class="library-card-find-wrapper">
                             <div class="library-card-find-gold-inputs-wrapper">
-                                <p class="library-card-find-gold-title">Brooklyn Public Library</p>
+                                <label for="name" class="library-card-find-gold-title">Brooklyn Public Library</label>
                                 <input class="library-card-find-input" type="text" value="Reader's name">
                                 <input class="library-card-find-input" type="text" value="Card Number">
                             </div>
-                            <button class="library-card-find-button">Check the card</button>
+                            <input type="submit" value="Check the card" class="library-card-find-button"></input>
                         </form>
                     </div>
                     <div class="library-card-get-wrapper">
@@ -766,6 +772,7 @@
 </body>
 
 <script src="./src/index.js"></script>
+<script src="./src/scripts/get-card.js"></script>
 <script src="./src/scripts/carousel.js"></script>
 <script src="./src/scripts/slider.js"></script>
 <script type="module" src="./src/scripts/burger.js"></script>

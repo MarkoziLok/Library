@@ -45,16 +45,24 @@ let regEmailTitle = document.querySelector('.reg-email-title');
 
 // inputs
 
+let warningFirst = document.querySelector('.warning-first');
+let warningLast = document.querySelector('.warning-last');
+let warningEmail = document.querySelector('.warning-email');
+let warningPass = document.querySelector('.warning-pass');
+
+let warningLogEmail = document.querySelector('.warning-log-email');
+let warningLogPass = document.querySelector('.warning-log-pass');
+
+// non correct warning's
+
 logInInDropMenuBtn.addEventListener('click', () => {
     logModal.classList.toggle('none');
     body.classList.add('non-scroll');
-    regStat === true ? menuAuth.classList.toggle('none') : menuNoAuth.classList.toggle('none')
 });
 
 regInInDropMenuBtn.addEventListener('click', () => {
     regModal.classList.toggle('none');
     body.classList.add('non-scroll');
-    regStat === true ? menuAuth.classList.toggle('none') : menuNoAuth.classList.toggle('none')
 });
 
 // open sing and reg modal
@@ -71,35 +79,37 @@ regInModal.addEventListener('click', () => {
 
 // in modal log in sin
 
-logInModalBtn.addEventListener('click', () => {
+logInModalBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     logPass.value.length < 8 
-    ? logPassTitle.classList.add('non-correct')
-    : logPassTitle.classList.remove('non-correct');
+    ? warningLogPass.classList.remove('none')
+    : warningLogPass.classList.add('none');
     logEmail.value.length <= 6 
     && regEmail.value.indexOf('@') == -1
     && regEmail.value.indexOf('.') == -1
-    ? logEmailTitle.classList.add('non-correct')
-    : logEmailTitle.classList.remove('non-correct');
+    ? warningLogEmail.classList.remove('none')
+    : warningLogEmail.classList.add('none');
 })
 
-regInModalBtn.addEventListener('click', () => {
+regInModalBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     regEmail.value.length <= 6 
     && regEmail.value.indexOf('@') == -1
     && regEmail.value.indexOf('.') == -1
-    ? regEmailTitle.classList.add('non-correct')
-    : regEmailTitle.classList.remove('non-correct');
+    ? warningEmail.classList.remove('none')
+    : warningEmail.classList.add('none')
 })
 
 regInModalBtn.addEventListener('click', () => {
     regPass.value.length < 8
-    ? regPassTitle.classList.add('non-correct')
-    : regPassTitle.classList.remove('non-correct');
+    ? warningPass.classList.remove('none')
+    : warningPass.classList.add('none')
     firstName.value.length < 1
-    ? firstTitle.classList.add('non-correct')
-    : firstTitle.classList.remove('non-correct');
+    ? warningFirst.classList.remove('none')
+    : warningFirst.classList.add('none')
     lastName.value.length < 1
-    ? lastTitle.classList.add('non-correct')
-    : lastTitle.classList.remove('non-correct');
+    ? warningLast.classList.remove('none')
+    : warningLast.classList.add('none')
 })
 
 // inputs empty error
@@ -128,7 +138,6 @@ for (let i = 0; i < modalCross.length; i++) {
         logModal.classList.add('none');
         regModal.classList.add('none');
         body.classList.remove('non-scroll');
-        regStat === true ? menuAuth.classList.toggle('none') : menuNoAuth.classList.toggle('none')
     })
 };
 

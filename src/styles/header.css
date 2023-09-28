@@ -272,8 +272,9 @@ header {
 }
 
 .modal-log-in-btn:hover {
+  color: white;
+  background-color: #bb945f;
   border: solid 1px #bb945f;
-  color: #bb945f;
 }
 
 .modal-reg-btn {
@@ -375,7 +376,17 @@ header {
 
 .modal-alredy-acc-log-in:hover {
   color: #bb945f;
-  border-bottom: solid 1px #bb945f;
+  border-bottom: solid 1px#bb945f;
+}
+
+.modal-reg-btn, .modal-log-in-btn {
+  transition: 0.3s;
+}
+
+.modal-reg-btn:hover {
+  color: white;
+  background-color: #bb945f;
+  border: solid 1px#bb945f;
 }
 
 .modal-profile-wrapper {                               /* profile modal */
@@ -522,6 +533,17 @@ header {
 
 .copy-icon {
   cursor: pointer;
+}
+
+.modal-input-wrapper {
+  height: 50px;
+}
+
+.warning {
+  font-style: Inter;
+  font-size: 10px;
+  position: relative;
+  top: -38px;
 }
 
 /* media qeries for adaptive */

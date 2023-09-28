@@ -35,6 +35,10 @@
     padding: 40px 0;
     display: flex;
     width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
 }
 
 .favorites-button-wrapper {
@@ -94,7 +98,7 @@ input:checked{
     width: 200px;
     height: 300px;
     position: relative;
-    top: 275px;
+    top: 277px;
     left: 20px;
 }
 
@@ -140,6 +144,10 @@ input:checked{
     font-weight: 700;
     cursor: pointer;
     z-index: 1;
+}
+
+.favorites-book-buy:hover{
+    border: solid 1px #bb975f;
 }
 
 .favorites-book-own {

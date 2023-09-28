@@ -112,9 +112,11 @@
     letter-spacing: 1px;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s;
 }
 .library-card-find-button:hover {
     background-color: #bb975f;
+    border: solid 1px #bb975f;
     color: white;
 }
 
@@ -161,6 +163,7 @@
 }
 .library-card-get-button:hover {
     background-color: #bb975f;
+    border: solid 1px #bb975f;
     color: white;
 }
 
