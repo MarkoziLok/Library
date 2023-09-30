@@ -10,9 +10,6 @@ let logPass = document.getElementById('log-pass');
 
 let logInModalBtn = document.querySelector('.modal-log-in-btn');
 
-let logPassTitle = document.querySelector('.modal-log-in-pass-title');
-let logEmailTitle = document.querySelector('.modal-log-in-email-title'); 
-
 // log in lets
 
 
@@ -38,13 +35,6 @@ let buyBtn = document.querySelectorAll('.favorites-book-buy')
 
 // buttons in card section & buy buttons
 
-let firstTitle = document.querySelector('.first-title');
-let lastTitle = document.querySelector('.last-title');
-let regPassTitle = document.querySelector('.reg-pass-title');
-let regEmailTitle = document.querySelector('.reg-email-title'); 
-
-// inputs
-
 let warningFirst = document.querySelector('.warning-first');
 let warningLast = document.querySelector('.warning-last');
 let warningEmail = document.querySelector('.warning-email');
@@ -54,6 +44,8 @@ let warningLogEmail = document.querySelector('.warning-log-email');
 let warningLogPass = document.querySelector('.warning-log-pass');
 
 // non correct warning's
+
+// array users
 
 logInInDropMenuBtn.addEventListener('click', () => {
     logModal.classList.toggle('none');
@@ -81,35 +73,51 @@ regInModal.addEventListener('click', () => {
 
 logInModalBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    logPass.value.length < 8 
-    ? warningLogPass.classList.remove('none')
-    : warningLogPass.classList.add('none');
-    logEmail.value.length <= 6 
-    && regEmail.value.indexOf('@') == -1
-    && regEmail.value.indexOf('.') == -1
-    ? warningLogEmail.classList.remove('none')
-    : warningLogEmail.classList.add('none');
+    if (logPass.value.length < 8) {
+        warningLogPass.classList.remove('none') // error password length < 8
+    } else {
+        warningLogPass.classList.add('none');
+    }
+    if (
+        logEmail.value.length <= 6
+        && regEmail.value.indexOf('@') == -1
+        && regEmail.value.indexOf('.') == -1
+    ) {
+       warningLogEmail.classList.remove('none')  // error email is not a correct
+    } else {
+       warningLogEmail.classList.add('none'); 
+    } 
 })
 
 regInModalBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    regEmail.value.length <= 6 
-    && regEmail.value.indexOf('@') == -1
-    && regEmail.value.indexOf('.') == -1
-    ? warningEmail.classList.remove('none')
-    : warningEmail.classList.add('none')
+    if (
+        regEmail.value.length <= 6 
+        && regEmail.value.indexOf('@') == -1
+        && regEmail.value.indexOf('.') == -1
+    ) {
+       warningEmail.classList.remove('none') 
+    } else {
+        warningEmail.classList.add('none')
+    }
 })
 
 regInModalBtn.addEventListener('click', () => {
-    regPass.value.length < 8
-    ? warningPass.classList.remove('none')
-    : warningPass.classList.add('none')
-    firstName.value.length < 1
-    ? warningFirst.classList.remove('none')
-    : warningFirst.classList.add('none')
-    lastName.value.length < 1
-    ? warningLast.classList.remove('none')
-    : warningLast.classList.add('none')
+    if (regPass.value.length < 8) {
+        warningPass.classList.remove('none') // error password length < 8
+    } else {
+        warningPass.classList.add('none')
+    }
+    if (firstName.value.length < 1) {
+        warningFirst.classList.remove('none') // error none first name
+    } else {
+        warningFirst.classList.add('none')
+    }
+    if (lastName.value.length < 1) {
+        warningLast.classList.remove('none') // error none last name
+    } else {
+        warningLast.classList.add('none')
+    }
 })
 
 // inputs empty error
