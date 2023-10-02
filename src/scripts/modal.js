@@ -1,4 +1,15 @@
-import { body } from "./burger.js";
+import { burger, burgerElem, body, navBar } from "./burger.js";
+import { icon } from "./drop-menu.js";
+
+let singIcon = document.querySelector('.sing-icon');
+let profileModal = document.querySelector('.modal-profile');
+
+let initialsInModal = document.querySelector('.initials-in-modal');
+let nameInModal = document.querySelector('.modal-profile-name');
+let numberCardInModal = document.querySelector('.number-card-in-modal');
+let copyBtn = document.querySelector('.copy-icon');
+
+// lets modal profile
 
 let logInInDropMenuBtn = document.querySelector('.log-in');
 let logModal = document.querySelector('.modal-log-in');
@@ -9,9 +20,9 @@ let logEmail = document.getElementById('log-email');
 let logPass = document.getElementById('log-pass');
 
 let logInModalBtn = document.querySelector('.modal-log-in-btn');
+let number;
 
 // log in lets
-
 
 let regModal = document.querySelector('.modal-register');
 let regInInDropMenuBtn = document.querySelector('.register');
@@ -129,7 +140,7 @@ logInModalBtn.addEventListener('click', (e) => {
 
 })
 
-regInModalBtn.addEventListener('click', (e) => {
+regInModalBtn.addEventListener('click', (e) => {            // register 
 
     e.preventDefault();
 
@@ -196,9 +207,9 @@ regInModalBtn.addEventListener('click', (e) => {
     {
         let counter = 0;                                    // let for secure double use also email
 
-        if (typeof users.User0 !== undefined) {        // if local storage is not empty
+        if (typeof users.User0 !== undefined) {             // if local storage is not empty
 
-            for (let key in users) {                   // no working secure :(
+            for (let key in users) {                        // secure email double
                 users[key].email === emailVal           
                 ? counter++
                 : console.log(users)
@@ -206,14 +217,14 @@ regInModalBtn.addEventListener('click', (e) => {
 
         }
         
-        if (counter > 0) {                           // error if use saved email
+        if (counter > 0) {                                  // error if use saved email
 
             alert('This email is already registered');
             warningEmail.classList.remove('none');
 
         } else {                                            // record new user in localstorage
 
-            let number = generateNumber();
+            number = generateNumber();
 
             const user = new User (firstNameVal, lastNameVal, emailVal, passwordVal, number);
             const userId = 'User' + createId(users);
@@ -223,8 +234,16 @@ regInModalBtn.addEventListener('click', (e) => {
 
             alert('You are create account. You can login');
 
-            logModal.classList.remove('none');
+            icon.classList.add('none')
+            singIcon.classList.remove('none');
             regModal.classList.add('none');
+            body.classList.remove('non-scroll')
+
+            singIcon.innerHTML = firstNameVal[0] + lastNameVal[0];
+            singIcon.title = firstNameVal + ' ' + lastNameVal;
+            initialsInModal.innerHTML = firstNameVal[0] + lastNameVal[0];
+            nameInModal.innerHTML = firstNameVal + ' ' + lastNameVal;
+            numberCardInModal.innerHTML = number;
                     
             localStorage.setItem('users', JSON.stringify(users));
 
@@ -234,7 +253,19 @@ regInModalBtn.addEventListener('click', (e) => {
 
 })
 
-console.log(users)
+
+singIcon.addEventListener('click', () => {
+    profileModal.classList.remove('none');
+    body.classList.add('non-scroll');
+    burger.classList.remove('rotate-pad');
+    navBar.classList.add('nav-none'); 
+    burgerElem.classList.remove('rotate');
+})
+
+copyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(number);
+    alert('Number copied.')
+})
 
 // inputs empty error
 
@@ -261,6 +292,7 @@ for (let i = 0; i < modalCross.length; i++) {               // cross close modal
     modalCross[i].addEventListener('click', () => {
         logModal.classList.add('none');
         regModal.classList.add('none');
+        profileModal.classList.add('none');
         body.classList.remove('non-scroll');
     })
 };
@@ -274,10 +306,15 @@ window.addEventListener('click', (e) => {                   // close modal if cl
         !target.closest('.drop-menu-link') &&
         !target.closest('.card-log-in') &&
         !target.closest('.card-sing-up') &&
-        !target.closest('.favorites-book-buy')
+        !target.closest('.favorites-book-buy') &&
+        !target.closest('.modal-profile') &&
+        !target.closest('.sing-icon')
         ) {
             regModal.classList.add('none');
             logModal.classList.add('none');
+            profileModal.classList.add('none')
             body.classList.remove('non-scroll');
         }
 });
+
+export { profileModal };

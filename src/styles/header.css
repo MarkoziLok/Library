@@ -57,6 +57,22 @@ header {
   z-index: 1;
 }
 
+.sing-icon {
+  font-size: 22px;
+  font-style: Inter;
+  padding: 7px;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  color: #bb945f;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.sing-icon:hover {
+  color: #fff;
+  border: solid 1px #bb945f;
+}
+
 .drop-menu-no-auth {
   width: 80px;
   height: 115px;
@@ -118,6 +134,7 @@ header {
   height: 20px;
   display: none;
   margin-left: 40px;
+  z-index: 1;
 }
 
 .burger-elem {
@@ -391,10 +408,9 @@ header {
 
 .modal-profile-wrapper {                               /* profile modal */
   position: fixed;
-  top: 135px;
-  left: 235px;
-  transform: translate(50%, 50%);
-  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   height: 400px;
   display: flex;
   justify-content: space-between;
@@ -430,7 +446,7 @@ header {
 
 .modal-profile-name {
   font-family: Inter;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0px;
@@ -518,7 +534,7 @@ header {
   justify-content: space-between;
 }
 
-.number-card-title, .number-card {
+.number-card-title, .number-card-in-modal {
   font-family: Inter;
   font-size: 20px;
   font-weight: 400;
@@ -527,12 +543,16 @@ header {
   text-align: center;
 }
 
-.number-card {
+.number-card-in-modal {
   color: #bb945f;
 }
 
 .copy-icon {
   cursor: pointer;
+}
+
+.copy-icon:hover {
+  transform: scale(1.2);
 }
 
 .modal-input-wrapper {
