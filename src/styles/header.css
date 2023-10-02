@@ -57,6 +57,22 @@ header {
   z-index: 1;
 }
 
+.sing-icon {
+  font-size: 22px;
+  font-style: Inter;
+  padding: 7px;
+  border-radius: 50%;
+  border: solid 1px #fff;
+  color: #bb945f;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.sing-icon:hover {
+  color: #fff;
+  border: solid 1px #bb945f;
+}
+
 .drop-menu-no-auth {
   width: 80px;
   height: 115px;
@@ -118,6 +134,7 @@ header {
   height: 20px;
   display: none;
   margin-left: 40px;
+  z-index: 1;
 }
 
 .burger-elem {
@@ -272,8 +289,9 @@ header {
 }
 
 .modal-log-in-btn:hover {
+  color: white;
+  background-color: #bb945f;
   border: solid 1px #bb945f;
-  color: #bb945f;
 }
 
 .modal-reg-btn {
@@ -375,7 +393,177 @@ header {
 
 .modal-alredy-acc-log-in:hover {
   color: #bb945f;
-  border-bottom: solid 1px #bb945f;
+  border-bottom: solid 1px#bb945f;
+}
+
+.modal-reg-btn, .modal-log-in-btn {
+  transition: 0.3s;
+}
+
+.modal-reg-btn:hover {
+  color: white;
+  background-color: #bb945f;
+  border: solid 1px#bb945f;
+}
+
+.modal-profile-wrapper {                               /* profile modal */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.9);
+}
+
+.modal-profile-left-wrapper {
+  height: 100%;
+  width: 170px;
+  background-color: #0c0c0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-profile-avatar-name {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #bb945f;
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-profile-name {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  width: 130px;
+  height: 30px;
+  background-color: white;
+  color: #0c0c0e; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.modal-profile-right-wrapper {
+  width: 430px;
+  height: 100%;
+  background-color: white;
+  color: #0c0c0e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.modal-profile-title {
+  font-family: Forum;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.modal-profile-characters {
+  display: flex;
+  justify-content: space-between;
+  width: 237px;
+}
+
+.modal-profile-character {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 81px;
+}
+
+.character {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.score-character {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.rented-book-title {
+  font-family: Inter;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.modal-profile-card-number-wrapper {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rented-book {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-card-title, .number-card-in-modal {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.number-card-in-modal {
+  color: #bb945f;
+}
+
+.copy-icon {
+  cursor: pointer;
+}
+
+.copy-icon:hover {
+  transform: scale(1.2);
+}
+
+.modal-input-wrapper {
+  height: 50px;
+}
+
+.warning {
+  font-style: Inter;
+  font-size: 10px;
+  position: relative;
+  top: -38px;
 }
 
 /* media qeries for adaptive */

@@ -36,6 +36,7 @@
                 </nav>
                 <div class="drop-menu">
                     <img src="./src/images/header/register-icon.svg" alt="register-icon" class="register-icon">
+                    <p class="sing-icon none"></p>
                     <div class="drop-menu-no-auth none">
                         <p class="drop-menu-title">Profile</p>
                         <a class="drop-menu-link log-in">Log In</a>
@@ -51,17 +52,19 @@
                 <div class="modal-log-in none">
                     <div class="modal-cross"></div>
                     <h6 class="modal-log-in-title">LOGIN</h6>
-                    <div class="modal-log-in-wrapper">
+                    <form class="modal-log-in-wrapper">
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-email-title">E-mail or readers card</p>
+                            <label class="modal-log-in-email-title">E-mail or readers card</label>
                             <input class="modal-input" type="email" name="email" id="log-email">
+                            <span class="warning warning-log-email non-correct none">Email is not a correct</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-pass-title">Password</p>
+                            <label class="modal-log-in-pass-title">Password</label>
                             <input class="modal-input" type="password" name="pass" id="log-pass">
+                            <span class="warning warning-log-pass non-correct none">Passwors is not a correct</span>
                         </div>
-                        <button class="modal-log-in-btn">Log In</button>
-                    </div>
+                        <input type="submit" value="Log In" class="modal-log-in-btn"></input>
+                    </form>
                     <div class="modal-none-acc-wrapper">
                         <p class="modal-none-acc-ask">Don't have an account?</p>
                         <a href="#" class="modal-none-acc-register">Register</a>
@@ -70,28 +73,74 @@
                 <div class="modal-register none">
                     <div class="modal-cross"></div>
                     <h6 class="modal-log-in-title">REGISTER</h6>
-                    <div class="modal-register-wrapper">
+                    <form class="modal-register-wrapper">
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-email-title first-title">First Name</p>
+                            <label for="first-name" class="modal-log-in-email-title first-title">First Name</label>
                             <input class="modal-input" type="text" name="first-name" id="first-name">
+                            <span class="warning warning-first non-correct none">Enter you first name</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-pass-title last-title">Last Name</p>
+                            <label for="last-name" class="modal-log-in-pass-title last-title">Last Name</label>
                             <input class="modal-input" type="text" name="last-name" id="last-name">
+                            <span class="warning warning-last non-correct none">Enter you last name</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-email-title reg-email-title">E-mail</p>
+                            <label for="email" class="modal-log-in-email-title reg-email-title">E-mail</label>
                             <input class="modal-input" type="email" name="email" id="reg-email">
+                            <span class="warning warning-email non-correct none">Email is not correct</span>
                         </div>
                         <div class="modal-input-wrapper">
-                            <p class="modal-log-in-pass-title reg-pass-title">Password</p>
+                            <label for="pass" class="modal-log-in-pass-title reg-pass-title">Password</label>
                             <input class="modal-input" type="password" name="pass" id="reg-pass">
+                            <span class="warning warning-pass non-correct none">Password is not correct</span>
                         </div>
-                        <button class="modal-reg-btn">Sing Up</button>
-                    </div>
+                        <input type="submit" value="Sing Up" class="modal-reg-btn"></input>
+                    </form>
                     <div class="modal-none-acc-wrapper">
                         <p class="modal-none-acc-ask">Alredy have an account?</p>
                         <a class="modal-alredy-acc-log-in">Login</a>
+                    </div>
+                </div>
+                <div class="modal-profile none">
+                    <div class="modal-profile-wrapper">
+                        <div class="modal-cross"></div>
+                        <div class="modal-profile-left-wrapper">
+                            <div class="modal-profile-avatar-name">
+                                <p class="initials-in-modal" >NS</p>
+                            </div>
+                            <div class="modal-profile-name">
+                                <p>Name Surname</p>
+                            </div>
+                        </div>
+                        <div class="modal-profile-right-wrapper">
+                            <h6 class="modal-profile-title">MY PROFILE</h6>
+                            <div class="modal-profile-characters">
+                                <div class="modal-profile-character">
+                                    <p class="character">Visits</p>
+                                    <img class="logo-character" src="./src/images/header/profile-modal/union.svg" alt="union">
+                                    <p class="score-character">0</p>
+                                </div>
+                                <div class="modal-profile-character">
+                                    <p class="character">Bonuses</p>
+                                    <img class="logo-character" src="./src/images/header/profile-modal/star.svg" alt="star">
+                                    <p class="score-character">0</p>
+                                </div>
+                                <div class="modal-profile-character">
+                                    <p class="character">Books</p>
+                                    <img class="logo-character" src="./src/images/header/profile-modal/book.svg" alt="book">
+                                    <p class="score-character">0</p>
+                                </div>
+                            </div>
+                            <div class="rented-book">
+                                <h8 class="rented-book-title">Rented books</h8>
+                                <ul></ul>
+                            </div>
+                            <div class="modal-profile-card-number-wrapper">
+                                <p class="number-card-title">Card number:</p>
+                                <p class="number-card-in-modal">F00000000</p>
+                                <img title="Copy" class="copy-icon" src="./src/images/header/profile-modal/icon-copy.svg" alt="copy-icon">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -660,11 +709,11 @@
                         <h5 class="library-card-find-title">Find your Library card</h5>
                         <form class="library-card-find-wrapper">
                             <div class="library-card-find-gold-inputs-wrapper">
-                                <p class="library-card-find-gold-title">Brooklyn Public Library</p>
+                                <label for="name" class="library-card-find-gold-title">Brooklyn Public Library</label>
                                 <input class="library-card-find-input" type="text" value="Reader's name">
                                 <input class="library-card-find-input" type="text" value="Card Number">
                             </div>
-                            <button class="library-card-find-button">Check the card</button>
+                            <input type="submit" value="Check the card" class="library-card-find-button"></input>
                         </form>
                     </div>
                     <div class="library-card-get-wrapper">
@@ -723,11 +772,13 @@
     
 </body>
 
+<script src="./src/index.js"></script>
+<script src="./src/scripts/get-card.js"></script>
+<script src="./src/scripts/carousel.js"></script>
+<script src="./src/scripts/slider.js"></script>
 <script type="module" src="./src/scripts/burger.js"></script>
 <script type="module" src="./src/scripts/drop-menu.js"></script>
 <script type="module" src="./src/scripts/modal.js"></script>
-<script src="./src/scripts/carousel.js"></script>
-<script src="./src/scripts/slider.js"></script>
-<script src="./src/index.js"></script>
+<script type="module" src="./src/scripts/profile-modal.js"></script>
 
 </html>
