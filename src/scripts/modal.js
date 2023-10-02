@@ -45,26 +45,53 @@ let warningLogPass = document.querySelector('.warning-log-pass');
 
 // non correct warning's
 
-// array users
+let users = {};
 
-logInInDropMenuBtn.addEventListener('click', () => {
+function User(firstName, lastName, email, password, number) { // constructor 
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.password = password;
+    this.number = number;
+}
+
+function createId(users) {                            // createId function
+    return Object.keys(users).length;
+};
+
+users = JSON.parse(localStorage.getItem('users'))  // get object in local storage
+
+logInInDropMenuBtn.addEventListener('click', () => {        // open login modal
     logModal.classList.toggle('none');
     body.classList.add('non-scroll');
 });
 
-regInInDropMenuBtn.addEventListener('click', () => {
+regInInDropMenuBtn.addEventListener('click', () => {        // open sing up modal
     regModal.classList.toggle('none');
     body.classList.add('non-scroll');
 });
 
+const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+function generateNumber() {
+    let result = '';
+    const charactersLength = characters.length;
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    for (let i = 0; i < 8; i++) {
+        result += Math.floor(Math.random() * 10)
+    }
+    
+    return result;
+}
+
 // open sing and reg modal
 
-logInModal.addEventListener('click', () => {
+logInModal.addEventListener('click', () => {                // close log in modal and open sign up 
     logModal.classList.remove('none');
     regModal.classList.add('none');
 });
 
-regInModal.addEventListener('click', () => {
+regInModal.addEventListener('click', () => {                // close sing in modal and open log up
     logModal.classList.add('none');
     regModal.classList.remove('none');
 });
@@ -72,67 +99,156 @@ regInModal.addEventListener('click', () => {
 // in modal log in sin
 
 logInModalBtn.addEventListener('click', (e) => {
+
     e.preventDefault();
+
     if (logPass.value.length < 8) {
-        warningLogPass.classList.remove('none') // error password length < 8
+
+        warningLogPass.classList.remove('none')            // log in error password length < 8
+
     } else {
+
         warningLogPass.classList.add('none');
+
     }
+
     if (
         logEmail.value.length <= 6
         && regEmail.value.indexOf('@') == -1
         && regEmail.value.indexOf('.') == -1
-    ) {
-       warningLogEmail.classList.remove('none')  // error email is not a correct
+    ) 
+    {
+
+       warningLogEmail.classList.remove('none')            // log in error email is not a correct
+
     } else {
+
        warningLogEmail.classList.add('none'); 
+
     } 
+
 })
 
 regInModalBtn.addEventListener('click', (e) => {
+
     e.preventDefault();
+
+    let firstNameVal = '';
+    let lastNameVal = '';
+    let emailVal = '';
+    let passwordVal = '';                                   // lets for saved data user
+    
+    if (firstName.value.length < 1) {
+
+        warningFirst.classList.remove('none')               // error none first name
+
+    } else {
+
+        warningFirst.classList.add('none')
+        firstNameVal = firstName.value;
+
+    }
+
+    if (lastName.value.length < 1) {
+
+        warningLast.classList.remove('none')                // error none last name
+
+    } else {
+
+        warningLast.classList.add('none')
+        lastNameVal = lastName.value;
+
+    }
+
     if (
         regEmail.value.length <= 6 
         && regEmail.value.indexOf('@') == -1
         && regEmail.value.indexOf('.') == -1
-    ) {
-       warningEmail.classList.remove('none') 
+    ) 
+    {
+       
+        warningEmail.classList.remove('none')               // error if email none correct
+
     } else {
+
         warningEmail.classList.add('none')
+        emailVal = regEmail.value;
+
     }
+
+    if (regPass.value.length < 8) {
+
+        warningPass.classList.remove('none')                // error password length < 8
+
+    } else {
+
+        warningPass.classList.add('none')
+        passwordVal = regPass.value;
+
+    }
+
+    if (
+        firstNameVal.length > 0
+        && lastNameVal.length > 0
+        && emailVal.length > 0
+        && passwordVal.length > 0                           // if all datas is correct
+    ) 
+    {
+        let counter = 0;                                    // let for secure double use also email
+
+        if (typeof users.User0 !== undefined) {        // if local storage is not empty
+
+            for (let key in users) {                   // no working secure :(
+                users[key].email === emailVal           
+                ? counter++
+                : console.log(users)
+            };
+
+        }
+        
+        if (counter > 0) {                           // error if use saved email
+
+            alert('This email is already registered');
+            warningEmail.classList.remove('none');
+
+        } else {                                            // record new user in localstorage
+
+            let number = generateNumber();
+
+            const user = new User (firstNameVal, lastNameVal, emailVal, passwordVal, number);
+            const userId = 'User' + createId(users);
+            
+            warningEmail.classList.add('none');
+            users[userId] = user;
+
+            alert('You are create account. You can login');
+
+            logModal.classList.remove('none');
+            regModal.classList.add('none');
+                    
+            localStorage.setItem('users', JSON.stringify(users));
+
+        }
+        
+    }
+
 })
 
-regInModalBtn.addEventListener('click', () => {
-    if (regPass.value.length < 8) {
-        warningPass.classList.remove('none') // error password length < 8
-    } else {
-        warningPass.classList.add('none')
-    }
-    if (firstName.value.length < 1) {
-        warningFirst.classList.remove('none') // error none first name
-    } else {
-        warningFirst.classList.add('none')
-    }
-    if (lastName.value.length < 1) {
-        warningLast.classList.remove('none') // error none last name
-    } else {
-        warningLast.classList.add('none')
-    }
-})
+console.log(users)
 
 // inputs empty error
 
-cardLogInBtn.addEventListener('click', () => {
+cardLogInBtn.addEventListener('click', () => {              // open log in modal in card section
     logModal.classList.remove('none');
     body.classList.add('non-scroll');
 })
 
-cardSingUpBtn.addEventListener('click', () => {
+cardSingUpBtn.addEventListener('click', () => {             // open sing up modal in card section
     regModal.classList.remove('none');
     body.classList.add('non-scroll');
 })
 
-for (let i = 0; i < buyBtn.length; i++) {
+for (let i = 0; i < buyBtn.length; i++) {                   // open log in modal if press 'buy' button
     buyBtn[i].addEventListener('click', () => {
         logModal.classList.remove('none');
         body.classList.add('non-scroll');
@@ -141,7 +257,7 @@ for (let i = 0; i < buyBtn.length; i++) {
 
 // buttons in card section open modals
 
-for (let i = 0; i < modalCross.length; i++) {
+for (let i = 0; i < modalCross.length; i++) {               // cross close modals
     modalCross[i].addEventListener('click', () => {
         logModal.classList.add('none');
         regModal.classList.add('none');
@@ -149,7 +265,7 @@ for (let i = 0; i < modalCross.length; i++) {
     })
 };
 
-window.addEventListener('click', (e) => { 
+window.addEventListener('click', (e) => {                   // close modal if click none on modal
     const target = e.target;
     if (
         !target.closest('.modal-log-in') && 
@@ -164,4 +280,4 @@ window.addEventListener('click', (e) => {
             logModal.classList.add('none');
             body.classList.remove('non-scroll');
         }
-}); // close modal if click none on modal
+});
