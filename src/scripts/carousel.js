@@ -5,7 +5,7 @@ let scrollCarousel = document.querySelector('.carousel-scroll');
 
 let possition = 0;
 
-for (let i = 0; i < commonBtn.length; i++) {
+for (let i = 0; i < commonBtn.length; i++) {                // press common button
 
     commonBtn[i].addEventListener('click', () => {
 
@@ -74,7 +74,7 @@ for (let i = 0; i < commonBtn.length; i++) {
 
 };
 
-for (let i = 0; i < arrowBtn.length; i++) {
+for (let i = 0; i < arrowBtn.length; i++) {                 // press arrow button (<1440px)
 
     arrowBtn[i].addEventListener('click', () => {
         
