@@ -1,10 +1,17 @@
+import { burger, burgerElem, body, navBar } from "./burger.js";
+import { logModal } from "./log-modal.js";
+import { regModal } from "./sing-modal.js";
+
+
 let icon = document.querySelector('.register-icon');
 let menuAuth = document.querySelector('.drop-menu-auth');
 let menuNoAuth = document.querySelector('.drop-menu-no-auth');
 
+let regInInDropMenuBtn = document.querySelector('.register');
+let logInInDropMenuBtn = document.querySelector('.log-in');
+
 let regStat = false;
 
-import { burger, burgerElem, body, navBar } from "./burger.js";
 
 icon.addEventListener('click', () => {
     regStat === true ? menuAuth.classList.toggle('none') : menuNoAuth.classList.toggle('none');
@@ -25,5 +32,15 @@ window.addEventListener('click', (e) => {
             regStat === true ? menuAuth.classList.add('none') : menuNoAuth.classList.add('none');
         }
 }); // close drop-menu if click none on icon or drop-menu
+
+logInInDropMenuBtn.addEventListener('click', () => {        // open login modal
+    logModal.classList.toggle('none');
+    body.classList.add('non-scroll');
+});
+
+regInInDropMenuBtn.addEventListener('click', () => {        // open sing up modal
+    regModal.classList.toggle('none');
+    body.classList.add('non-scroll');
+});
 
 export { icon, menuAuth, menuNoAuth };
