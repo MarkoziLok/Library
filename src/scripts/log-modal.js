@@ -1,7 +1,7 @@
 import { body } from "./burger.js";
-import { icon } from "./drop-menu.js";
+import { icon, menuNoAuth } from "./drop-menu.js";
 import { initialsInModal, nameInModal, numberCardInModal, singIcon } from "./profile-modal.js";
-import { regModal, singStatus } from "./sing-modal.js";
+import { regModal } from "./sing-modal.js";
 
 let users = JSON.parse(localStorage.getItem('users'))  // get object in local storage
 
@@ -76,7 +76,7 @@ logInModalBtn.addEventListener('click', (e) => {
                 numberCardInModal.innerHTML = users[key].number;
     
                 secureAcc = true;
-                singStatus = true;
+                localStorage.setItem('status', 'true');
     
                 break
             }

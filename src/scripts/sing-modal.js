@@ -22,7 +22,6 @@ let warningEmail = document.querySelector('.warning-email');
 let warningPass = document.querySelector('.warning-pass');
 
 let number = '';
-let singStatus = false;
 
 let users = {};
 
@@ -39,6 +38,7 @@ function createId(users) {                            // createId function
 };
 
 users = JSON.parse(localStorage.getItem('users'))  // get object in local storage
+localStorage.setItem('status', 'false');
 
 const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
@@ -130,10 +130,10 @@ regInModalBtn.addEventListener('click', (e) => {            // register
             for (let key in users) {                        // secure email double
                 users[key].email === emailVal           
                 ? counter++
-                : console.log(users)
+                : console.log('He he boy...')
             };
 
-        }
+        };
         
         if (counter > 0) {                                  // error if use saved email
 
@@ -164,7 +164,7 @@ regInModalBtn.addEventListener('click', (e) => {            // register
             numberCardInModal.innerHTML = number;
                     
             localStorage.setItem('users', JSON.stringify(users));
-            singStatus = true;
+            localStorage.setItem('status', 'true');
 
         }
         
@@ -201,4 +201,4 @@ window.addEventListener('click', (e) => {                   // close modal if cl
         }
 });
 
-export { singStatus, regModal };
+export { regModal };
