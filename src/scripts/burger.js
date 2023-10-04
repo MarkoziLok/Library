@@ -5,7 +5,7 @@ let body = document.querySelector('.body')
 let navItem = document.querySelectorAll('.nav-li')
 
 import { menuNoAuth, menuAuth } from "./drop-menu.js";
-import { profileModal } from "./modal.js";
+import { profileModal } from "./profile-modal.js";
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('rotate-pad')
