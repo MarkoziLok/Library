@@ -1,0 +1,317 @@
+.favorites-section {
+    padding: 0 20px;
+}
+
+.favorites-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favorites-title {
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 20px 0 40px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(12, 12, 14);
+}
+
+.favorites-text {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 100%;
+}
+
+.favorites-buttons-wrapper {
+    padding: 40px 0;
+    display: flex;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+.favorites-button-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+}
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.favorites-button-input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 25px;
+}
+
+input:checked{
+    color: black;
+}
+
+.favorites-button-season {
+    font-family: Inter;
+    font-size: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 90px;
+}
+
+.favorites-books-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 40px;
+}
+
+.favorites-book {
+    display: flex;
+    border: 1px solid rgb(12, 12, 14);
+    padding: 20px;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.favorites-book-content-wrapper {
+    height: 555px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.favorites-book-img {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    top: 277px;
+    left: 20px;
+}
+
+.favorites-books-staff-picks {
+    font-family: Forum;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(187, 148, 95);
+}
+
+.favorites-book-name {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.favorites-book-overwiew {
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: capitalize;
+    width: 355px;
+    height: 320px;
+}
+
+.favorites-book-buy {
+    width: 75px;
+    height: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.favorites-book-buy:hover{
+    border: solid 1px #bb975f;
+}
+
+.favorites-book-own {
+    width: 75px;
+    height: 30px;
+    border: 1px solid rgb(187, 148, 95);
+    color: rgb(187, 148, 95);
+    background-color: white;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.favorites-books-wrapper-all {
+    position: relative;
+}
+
+.spring {
+    position: absolute;
+    max-width: 1400px;
+    top: 0px;
+    left: 0px;
+}
+
+.summer {
+    position: absolute;
+    max-width: 1400px;
+    top: 0px;
+    left: 0px;
+}
+
+.autumn {
+    position: absolute;
+    max-width: 1400px;
+    top: 0px;
+    left: 0px;
+}
+
+@media (max-width: 1250px) {
+    .favorites-books-wrapper {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .favorites-button-season{
+        margin-right: 60px;
+    }
+    .favorites-buttons-wrapper {
+        position: sticky;
+        top: 0px;
+        background-color: rgb(255, 255, 255);
+        z-index: 2;
+    }
+}
+
+@media (max-width: 700px) {
+    .favorites-button-season{
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 620px) {
+    .favorites-button-season{
+        margin-right: 10px;
+    }
+    .favorites-book {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 0;
+        
+    }
+    .favorites-book-img {
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 150px;
+        margin-top: -70px;
+        margin-right: -20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .favorites-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    .favorites-text {
+        font-size: 16px;
+    }
+    .favorites-book-content-wrapper {
+        height: 425px;
+    }
+    .favorites-buttons-wrapper {
+        margin: 25px 0;
+    }
+    .favorites-button-season {
+        font-size: 16px;
+    }
+    .favorites-button-input {
+        margin-right: 7px;
+    }
+    .favorites-books-staff-picks {
+        font-size: 16px;
+        width: 275px;
+    }
+    .favorites-book-name {
+        font-size: 10px;
+    }
+    .favorites-book-overwiew {
+        font-size: 10px;
+        line-height: 30px;
+        height: 160px;
+    }
+    .favorites-book-img {
+        margin-top: -70px;
+    }
+}
+
+@media (max-width: 450px) {
+    .favorites-title {
+        font-size: 26px;
+    }
+    .favorites-books-wrapper {
+        margin: 0 auto;
+        padding: 0;
+    }
+    .favorites-book {
+        max-width: 300px;
+        padding: 20px 0 0px 20px;
+    }
+    .favorites-book-name {
+        line-height: 35px;
+    }
+    .favorites-book-overwiew {
+        width: 260px;
+        font-size: 8px;
+        line-height: 25px;
+    }
+    .favorites-button-season {
+        font-size: 12px;
+    }
+    .favorites-books-staff-picks {
+        width: 200px;
+    }
+    .favorites-book-buy {
+        margin-top: 60px;
+    }
+    .favorites-book-img {
+        margin-right: 0px;
+    }
+}
+
+.fade-out {
+    opacity: 1;
+    transition: 2s;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: 2s;
+}
+
+.favorites-book-buy:hover {
+    color: white;
+    background-color: rgb(187, 148, 95);
+}
