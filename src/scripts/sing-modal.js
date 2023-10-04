@@ -1,31 +1,9 @@
-import { burger, burgerElem, body, navBar } from "./burger.js";
+import { body } from "./burger.js";
 import { icon } from "./drop-menu.js";
-
-let singIcon = document.querySelector('.sing-icon');
-let profileModal = document.querySelector('.modal-profile');
-
-let initialsInModal = document.querySelector('.initials-in-modal');
-let nameInModal = document.querySelector('.modal-profile-name');
-let numberCardInModal = document.querySelector('.number-card-in-modal');
-let copyBtn = document.querySelector('.copy-icon');
-
-// lets modal profile
-
-let logInInDropMenuBtn = document.querySelector('.log-in');
-let logModal = document.querySelector('.modal-log-in');
-
-let logInModal = document.querySelector('.modal-alredy-acc-log-in');
-
-let logEmail = document.getElementById('log-email');
-let logPass = document.getElementById('log-pass');
-
-let logInModalBtn = document.querySelector('.modal-log-in-btn');
-let number;
-
-// log in lets
+import { logModal } from "./log-modal.js";
+import { singIcon, profileModal, initialsInModal, nameInModal, numberCardInModal } from "./profile-modal.js";
 
 let regModal = document.querySelector('.modal-register');
-let regInInDropMenuBtn = document.querySelector('.register');
 
 let regInModal = document.querySelector('.modal-none-acc-register');
 
@@ -38,23 +16,13 @@ let lastName = document.getElementById('last-name');
 
 let regInModalBtn = document.querySelector('.modal-reg-btn');
 
-// reg lets
-
-let cardSingUpBtn = document.querySelector('.card-sing-up');
-let cardLogInBtn = document.querySelector('.card-log-in');
-let buyBtn = document.querySelectorAll('.favorites-book-buy')
-
-// buttons in card section & buy buttons
-
 let warningFirst = document.querySelector('.warning-first');
 let warningLast = document.querySelector('.warning-last');
 let warningEmail = document.querySelector('.warning-email');
 let warningPass = document.querySelector('.warning-pass');
 
-let warningLogEmail = document.querySelector('.warning-log-email');
-let warningLogPass = document.querySelector('.warning-log-pass');
-
-// non correct warning's
+let number = '';
+let singStatus = false;
 
 let users = {};
 
@@ -72,16 +40,6 @@ function createId(users) {                            // createId function
 
 users = JSON.parse(localStorage.getItem('users'))  // get object in local storage
 
-logInInDropMenuBtn.addEventListener('click', () => {        // open login modal
-    logModal.classList.toggle('none');
-    body.classList.add('non-scroll');
-});
-
-regInInDropMenuBtn.addEventListener('click', () => {        // open sing up modal
-    regModal.classList.toggle('none');
-    body.classList.add('non-scroll');
-});
-
 const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 function generateNumber() {
@@ -95,91 +53,10 @@ function generateNumber() {
     return result;
 }
 
-// open sing and reg modal
-
-logInModal.addEventListener('click', () => {                // close log in modal and open sign up 
-    logModal.classList.remove('none');
-    regModal.classList.add('none');
-});
-
 regInModal.addEventListener('click', () => {                // close sing in modal and open log up
     logModal.classList.add('none');
     regModal.classList.remove('none');
 });
-
-// in modal log in sin
-
-logInModalBtn.addEventListener('click', (e) => {
-
-    e.preventDefault();
-
-    let logEmailVal = '';
-    let logPassVal = '';
-
-    if (logPass.value.length < 8) {
-
-        warningLogPass.classList.remove('none')            // log in error password length < 8
-
-    } else {
-
-        warningLogPass.classList.add('none');
-        logPassVal = logPass.value;
-
-    }
-
-    if (
-        logEmail.value.length <= 6
-        || logEmail.value.indexOf('@') == -1
-        || logEmail.value.indexOf('.') == -1
-    ) 
-    {
-
-       warningLogEmail.classList.remove('none')            // log in error email is not a correct
-
-    } else {
-
-       warningLogEmail.classList.add('none'); 
-       logEmailVal = logEmail.value;
-
-    }
-
-    if (logEmailVal.length > 0 && logPassVal.length > 0) {
-
-        let secureAcc = false;
-
-        for (let key in users) {
-
-            if (users[key].email === logEmailVal && users[key].password === logPassVal) {
-    
-                icon.classList.add('none')
-                singIcon.classList.remove('none');
-                logModal.classList.add('none');
-                body.classList.remove('non-scroll')
-    
-                singIcon.innerHTML = users[key].firstName[0] + users[key].lastName[0];
-                singIcon.title = users[key].firstName + ' ' + users[key].lastName   ;
-                initialsInModal.innerHTML = users[key].firstName[0] + users[key].lastName[0];
-                nameInModal.innerHTML = users[key].firstName + ' ' + users[key].lastName;
-                numberCardInModal.innerHTML = users[key].number;
-    
-                secureAcc = true;
-    
-                break
-            }
-    
-        }
-
-        if (secureAcc === false) {
-
-            alert(`Error in email or password`);
-            warningLogEmail.classList.remove('none');
-            warningLogPass.classList.remove('none');
-
-        }
-
-    }
-
-})
 
 regInModalBtn.addEventListener('click', (e) => {            // register 
 
@@ -287,47 +164,13 @@ regInModalBtn.addEventListener('click', (e) => {            // register
             numberCardInModal.innerHTML = number;
                     
             localStorage.setItem('users', JSON.stringify(users));
+            singStatus = true;
 
         }
         
     }
 
 })
-
-
-singIcon.addEventListener('click', () => {
-    profileModal.classList.remove('none');
-    body.classList.add('non-scroll');
-    burger.classList.remove('rotate-pad');
-    navBar.classList.add('nav-none'); 
-    burgerElem.classList.remove('rotate');
-})
-
-copyBtn.addEventListener('click', () => {
-    navigator.clipboard.writeText(number);
-    alert('Number copied.')
-})
-
-// inputs empty error
-
-cardLogInBtn.addEventListener('click', () => {              // open log in modal in card section
-    logModal.classList.remove('none');
-    body.classList.add('non-scroll');
-})
-
-cardSingUpBtn.addEventListener('click', () => {             // open sing up modal in card section
-    regModal.classList.remove('none');
-    body.classList.add('non-scroll');
-})
-
-for (let i = 0; i < buyBtn.length; i++) {                   // open log in modal if press 'buy' button
-    buyBtn[i].addEventListener('click', () => {
-        logModal.classList.remove('none');
-        body.classList.add('non-scroll');
-    })
-} 
-
-// buttons in card section open modals
 
 for (let i = 0; i < modalCross.length; i++) {               // cross close modals
     modalCross[i].addEventListener('click', () => {
@@ -358,4 +201,4 @@ window.addEventListener('click', (e) => {                   // close modal if cl
         }
 });
 
-export { profileModal };
+export { singStatus, regModal };
