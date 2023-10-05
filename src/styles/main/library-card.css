@@ -167,6 +167,10 @@
     color: white;
 }
 
+.show-score {
+    color: #bb945f;
+}
+
 @media (max-width: 1100px) {
     .library-card-content-wrapper {
         flex-direction: column;

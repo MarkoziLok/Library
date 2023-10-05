@@ -3,7 +3,7 @@ import { icon, menuNoAuth } from "./drop-menu.js";
 import { initialsInModal, nameInModal, numberCardInModal, singIcon } from "./profile-modal.js";
 import { regModal } from "./sing-modal.js";
 
-let users = JSON.parse(localStorage.getItem('users'))  // get object in local storage
+let users = JSON.parse(localStorage.getItem('users'));  // get object in local storage
 
 let logModal = document.querySelector('.modal-log-in');
 
