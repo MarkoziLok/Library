@@ -1,7 +1,8 @@
 import { body } from "./burger.js";
 import { icon, menuNoAuth } from "./drop-menu.js";
+import { charactersInCard, submit, visitsScoreInCard } from "./get-card.js";
 import { initialsInModal, nameInModal, numberCardInModal, singIcon } from "./profile-modal.js";
-import { regModal } from "./sing-modal.js";
+import { regModal, numInDrop, visitsScore, contentCardSection, contentCardSectionSing } from "./sing-modal.js";
 
 let users = JSON.parse(localStorage.getItem('users'));  // get object in local storage
 
@@ -21,6 +22,8 @@ logInModal.addEventListener('click', () => {                // close log in moda
     logModal.classList.remove('none');
     regModal.classList.add('none');
 });
+
+let user = '';
 
 logInModalBtn.addEventListener('click', (e) => {
 
@@ -76,7 +79,20 @@ logInModalBtn.addEventListener('click', (e) => {
                 numberCardInModal.innerHTML = users[key].number;
     
                 secureAcc = true;
+                
+                numInDrop.innerHTML = users[key].number;
+                users[key].visits = users[key].visits + 1;
+                visitsScore.innerHTML = users[key].visits;
+                visitsScoreInCard.innerHTML = users[key].visits;
+
+                submit.classList.add('none');
+                charactersInCard.classList.remove('none');
+
+                contentCardSection.classList.add('none');
+                contentCardSectionSing.classList.remove('none');
+
                 localStorage.setItem('status', 'true');
+                localStorage.setItem('users', JSON.stringify(users));
     
                 break
             }

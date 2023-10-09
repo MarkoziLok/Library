@@ -19,9 +19,17 @@ for (let i = 0; i < inputBttn.length; i++) {
     })
 };
 
+function getStatusSing () {
+    return localStorage.getItem('status')
+};
+
 for (let i = 0; i < buyBtn.length; i++) {                   // open log in modal if press 'buy' button
     buyBtn[i].addEventListener('click', () => {
-        logModal.classList.remove('none');
-        body.classList.add('non-scroll');
-    })
+        if (getStatusSing() === 'false') {
+            logModal.classList.remove('none');
+            body.classList.add('non-scroll');
+        };
+    });
 };
+
+export { getStatusSing }

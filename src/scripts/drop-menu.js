@@ -1,7 +1,8 @@
 import { burger, burgerElem, body, navBar } from "./burger.js";
+import { charactersInCard, submit } from "./get-card.js";
 import { logModal } from "./log-modal.js";
 import { profileModal, singIcon } from "./profile-modal.js";
-import { regModal } from "./sing-modal.js";
+import { regModal, contentCardSection, contentCardSectionSing } from "./sing-modal.js";
 
 let icon = document.querySelector('.register-icon');
 let menuAuth = document.querySelector('.drop-menu-auth');
@@ -53,6 +54,12 @@ logOutInDropMenuBtn.addEventListener('click', () => {
     icon.classList.remove('none');
     singIcon.classList.add('none');
     menuAuth.classList.add('none');
+
+    submit.classList.remove('none'); 
+    charactersInCard.classList.add('none');
+
+    contentCardSection.classList.remove('none');
+    contentCardSectionSing.classList.add('none');
             
     localStorage.setItem('status', 'false');
 });

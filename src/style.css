@@ -53,6 +53,29 @@ a {
   transform: rotate(-45deg);
 }
 
+.modal-cross-white { 
+  cursor: pointer; 
+  position: absolute; 
+  top: 25px; 
+  right: 35px;
+}
+
+.modal-cross-white:before, .modal-cross-white:after {
+  content: ""; 
+  position: absolute; 
+  width: 24px; 
+  height: 4px; 
+  background: white
+}
+
+.modal-cross-white:before {
+  transform: rotate(45deg);
+}
+
+.modal-cross-white:after {
+  transform: rotate(-45deg);
+}
+
 .none {
   display: none;
 }

@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="./src/styles/main/contacts.css">
     <link rel="stylesheet" href="./src/styles/main/library-card.css">
     <link rel="stylesheet" href="./src/styles/footer.css">
+    <link rel="stylesheet" href="./src/styles/modals/buy-modal.css">
+    <link rel="stylesheet" href="./src/styles/modals/log-modal.css">
+    <link rel="stylesheet" href="./src/styles/modals/profile-modal.css">
+    <link rel="stylesheet" href="./src/styles/modals/sing-modal.css">
     <link rel="stylesheet" href="./src/style.css">
 </head>
 
@@ -43,7 +47,7 @@
                         <a class="drop-menu-link register">Register</a>
                     </div>
                     <div class="drop-menu-auth none">
-                        <p class="drop-menu-title">Profile</p>
+                        <p class="drop-menu-title profile-number"></p>
                         <a class="drop-menu-link profile">My Profile</a>
                         <a class="drop-menu-link log-out">Log Out</a>
                     </div>
@@ -118,7 +122,7 @@
                                 <div class="modal-profile-character">
                                     <p class="character">Visits</p>
                                     <img class="logo-character" src="./src/images/header/profile-modal/union.svg" alt="union">
-                                    <p class="score-character">0</p>
+                                    <p class="score-character visits-score">0</p>
                                 </div>
                                 <div class="modal-profile-character">
                                     <p class="character">Bonuses</p>
@@ -128,7 +132,7 @@
                                 <div class="modal-profile-character">
                                     <p class="character">Books</p>
                                     <img class="logo-character" src="./src/images/header/profile-modal/book.svg" alt="book">
-                                    <p class="score-character">0</p>
+                                    <p class="score-character books-score">0</p>
                                 </div>
                             </div>
                             <div class="rented-book">
@@ -208,6 +212,56 @@
                     <div class="radio-wrapper">
                         <input type="radio" name="season" class="favorites-button-input" id="autumn">
                         <label for="autumn" class="favorites-button-season">Autumn</label>                        
+                    </div>
+                </div>
+                <div class="modal-buy none">
+                    <div class="modal-buy-header-wrapper">
+                        <h4 class="modal-buy-title">BUY A LUBRARY CARD</h4>
+                        <div class="modal-cross-white"></div>
+                    </div>
+                    <div class="modal-buy-wrapper">
+                        <div class="modal-buy-form-wrapper">
+                            <form class="modal-buy-form-wrapper">
+                                <label for="card-number">
+                                    Bank card number<br>
+                                    <input class="modal-buy-input" type="text" name="card-number" id="card-number" minlength="16" maxlength="16">
+                                </label>
+                                <label for="year">
+                                    Expiration code<br>
+                                    <input class="modal-buy-input small" type="text" name="moonth" id="moonth" minlength="2" maxlength="2">
+                                    <input class="modal-buy-input small" type="text" name="year" id="year" minlength="2" maxlength="2">
+                                </label>
+                                <label for="cvc">
+                                    CVC<br>
+                                    <input class="modal-buy-input small" type="text" name="cvc" id="cvc" minlength="3" maxlength="3">
+                                </label>
+                                <label for="holder">
+                                    Cardholder name<br>
+                                    <input class="modal-buy-input" type="text" name="holder" id="holder" minlength="3">
+                                </label>
+                                <label for="postal">
+                                    Postal code<br>
+                                    <input class="modal-buy-input" type="text" name="postal" id="postal" minlength="6" maxlength="6">
+                                </label>
+                                <label for="city">
+                                    City / Town<br>
+                                    <input class="modal-buy-input" type="text" name="city" id="city" minlength="5">
+                                </label>
+                                <div class="modal-buy-buy-wrapper">
+                                    <button class="modal-buy-submit">Buy</button>
+                                    <p class="price">25.00$</p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-buy-text">
+                            If you are live, work, attend school, 
+                            or pay property taxes in New York 
+                            State, you can get a $25 digital 
+                            library card right now using this 
+                            online form. Visitors to New York 
+                            State can also use this form to 
+                            apply for a temporary card.
+                        </div>
                     </div>
                 </div>
                 <div class="favorites-books-wrapper-all">
@@ -718,7 +772,7 @@
                                 <div class="profile-character">
                                     <p class="character">Visits</p>
                                     <img class="logo-character" src="./src/images/header/profile-modal/union.svg" alt="union">
-                                    <p class="score-character">0</p>
+                                    <p class="score-character visits-score-in-card">0</p>
                                 </div>
                                 <div class="profile-character">
                                     <p class="character">Bonuses</p>
@@ -728,7 +782,7 @@
                                 <div class="profile-character">
                                     <p class="character">Books</p>
                                     <img class="logo-character" src="./src/images/header/profile-modal/book.svg" alt="book">
-                                    <p class="score-character">0</p>
+                                    <p class="score-character books-score-in-card">0</p>
                                 </div>
                             </div>
                         </form>
@@ -743,6 +797,18 @@
                         <div class="library-card-get-buttons-wrapper">
                             <button class="library-card-get-button card-sing-up">Sing Up</button>
                             <button class="library-card-get-button card-log-in">Log In</button>
+                        </div>
+                    </div>
+                    <div class="library-card-get-wrapper library-card-get-wrapper-sing none">
+                        <h6 class="library-card-get-title">Visit You Profile</h6>
+                        <p class="library-card-get-text">
+                            With a digital library card you get free access 
+                            to the Library’s wide array of digital resources 
+                            including e-books, databases, educational 
+                            resources, and more.
+                        </p>
+                        <div class="library-card-get-buttons-wrapper">
+                            <button class="library-card-get-button visit-profile-in-card-section">Profile</button>
                         </div>
                     </div>
                 </div>
@@ -790,14 +856,14 @@
 </body>
 
 <script src="./src/index.js"></script>
-<script type="module" src="./src/scripts/get-card.js"></script>
-<script src="./src/scripts/carousel.js"></script>
-<script type="module" src="./src/scripts/slider.js"></script>
-<script type="module" src="./src/scripts/burger.js"></script>
-<script type="module" src="./src/scripts/drop-menu.js"></script>
-<script type="module" src="./src/scripts/profile-modal.js"></script>
+<script type="module" src="./src/scripts/sing-modal.js"></script>
 <script type="module" src="./src/scripts/log-modal.js"></script>
 <script type="module" src="./src/scripts/profile-modal.js"></script>
-<script type="module" src="./src/scripts/sing-modal.js"></script>
+<script type="module" src="./src/scripts/buy-modal.js"></script>
+<script type="module" src="./src/scripts/burger.js"></script>
+<script type="module" src="./src/scripts/drop-menu.js"></script>
+<script src="./src/scripts/carousel.js"></script>
+<script type="module" src="./src/scripts/slider.js"></script>
+<script type="module" src="./src/scripts/get-card.js"></script>
 
 </html>

@@ -159,6 +159,7 @@ input:checked{
     font-family: Inter;
     font-size: 12px;
     font-weight: 700;
+    cursor: auto;
 }
 
 .favorites-books-wrapper-all {

@@ -1,5 +1,7 @@
 import { body } from "./burger.js";
+import { buyModal } from "./buy-modal.js";
 import { icon } from "./drop-menu.js";
+import { charactersInCard, submit, visitsScoreInCard } from "./get-card.js";
 import { logModal } from "./log-modal.js";
 import { singIcon, profileModal, initialsInModal, nameInModal, numberCardInModal } from "./profile-modal.js";
 
@@ -21,16 +23,24 @@ let warningLast = document.querySelector('.warning-last');
 let warningEmail = document.querySelector('.warning-email');
 let warningPass = document.querySelector('.warning-pass');
 
+let numInDrop = document.querySelector('.profile-number');
+
+let visitsScore = document.querySelector('.visits-score');
+
+let contentCardSection = document.querySelector('.library-card-get-wrapper');
+let contentCardSectionSing = document.querySelector('.library-card-get-wrapper-sing');
+
 let number = '';
 
 let users = {};
 
-function User(firstName, lastName, email, password, number) { // constructor 
+function User(firstName, lastName, email, password, number, visits, books, id) { // constructor 
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
     this.password = password;
     this.number = number;
+    this.visits = visits;
 }
 
 function createId(users) {                            // createId function
@@ -65,7 +75,8 @@ regInModalBtn.addEventListener('click', (e) => {            // register
     let firstNameVal = '';
     let lastNameVal = '';
     let emailVal = '';
-    let passwordVal = '';                                   // lets for saved data user
+    let passwordVal = '';
+    let visitsVal = 1;                                   // lets for saved data user
     
     if (firstName.value.length < 1) {
 
@@ -144,13 +155,13 @@ regInModalBtn.addEventListener('click', (e) => {            // register
 
             number = generateNumber();
 
-            const user = new User (firstNameVal, lastNameVal, emailVal, passwordVal, number);
+            const user = new User (firstNameVal, lastNameVzal, emailVal, passwordVal, number, visitsVal);
             const userId = 'User' + createId(users);
             
             warningEmail.classList.add('none');
             users[userId] = user;
 
-            alert('You are create account. You can login');
+            alert('You are create account.');
 
             icon.classList.add('none')
             singIcon.classList.remove('none');
@@ -162,15 +173,24 @@ regInModalBtn.addEventListener('click', (e) => {            // register
             initialsInModal.innerHTML = firstNameVal[0] + lastNameVal[0];
             nameInModal.innerHTML = firstNameVal + ' ' + lastNameVal;
             numberCardInModal.innerHTML = number;
+            visitsScore.innerHTML = visitsVal;
+            visitsScoreInCard.innerHTML = users[userId].visits;
+            numInDrop.innerHTML = number;
+
+            submit.classList.add('none');
+            charactersInCard.classList.remove('none');
+
+            contentCardSection.classList.add('none');
+            contentCardSectionSing.classList.remove('none');
                     
             localStorage.setItem('users', JSON.stringify(users));
             localStorage.setItem('status', 'true');
 
-        }
+        };
         
-    }
+    };
 
-})
+});
 
 for (let i = 0; i < modalCross.length; i++) {               // cross close modals
     modalCross[i].addEventListener('click', () => {
@@ -192,13 +212,16 @@ window.addEventListener('click', (e) => {                   // close modal if cl
         !target.closest('.card-sing-up') &&
         !target.closest('.favorites-book-buy') &&
         !target.closest('.modal-profile') &&
-        !target.closest('.sing-icon')
+        !target.closest('.sing-icon') && 
+        !target.closest('.visit-profile-in-card-section') &&
+        !target.closest('.modal-buy')
         ) {
             regModal.classList.add('none');
             logModal.classList.add('none');
-            profileModal.classList.add('none')
+            profileModal.classList.add('none');
             body.classList.remove('non-scroll');
+            buyModal.classList.add('none');
         }
 });
 
-export { regModal };
+export { regModal, numInDrop, visitsScore, contentCardSection, contentCardSectionSing };
